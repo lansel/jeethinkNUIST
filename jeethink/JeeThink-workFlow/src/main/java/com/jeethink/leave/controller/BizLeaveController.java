@@ -3,6 +3,7 @@ package com.jeethink.leave.controller;
 import java.util.HashMap;
 import java.util.List;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.jeethink.activiti.domain.BizTodoItem;
 import com.jeethink.activiti.service.IBizTodoItemService;
@@ -36,7 +37,8 @@ import com.jeethink.leave.service.IBizLeaveService;
  */
 @RestController
 @RequestMapping("/workflow/leave")
-public class BizLeaveController extends BaseController {
+public class BizLeaveController extends BaseController
+{
     @Autowired
     private IBizLeaveService bizLeaveService;
 
@@ -57,8 +59,6 @@ public class BizLeaveController extends BaseController {
         List<BizLeave> list = bizLeaveService.selectBizLeaveList(bizLeave);
         return getDataTable(list);
     }
-
-
 
     /**
      * 导出请假流程列表
@@ -89,6 +89,15 @@ public class BizLeaveController extends BaseController {
     @Log(title = "请假流程", businessType = BusinessType.INSERT)
     @PostMapping
     public AjaxResult add(@RequestBody BizLeave bizLeave) {
+        List<String> czfaIds = bizLeave.getCzfaIds();
+        StringBuilder leaders = new StringBuilder();
+        if (czfaIds != null && !czfaIds.isEmpty()) {
+            for (String str : czfaIds) {
+                leaders.append(str);
+                leaders.append(";");
+            }
+        }
+        bizLeave.setLeaders(leaders.toString());
         Long userId = SecurityUtils.getUserId();
         if (SysUser.isAdmin(userId)) {
             return AjaxResult.error("提交申请失败：不允许管理员提交申请！");
@@ -121,7 +130,7 @@ public class BizLeaveController extends BaseController {
      * 提交申请
      */
     @Log(title = "请假业务", businessType = BusinessType.UPDATE)
-    @PostMapping( "/submitApply/{id}")
+    @PostMapping("/submitApply/{id}")
     @ResponseBody
     public AjaxResult submitApply(@PathVariable Long id) {
         BizLeave leave = bizLeaveService.selectBizLeaveById(id);
@@ -131,7 +140,21 @@ public class BizLeaveController extends BaseController {
     }
 
     /**
+     * 提交申请
+     */
+    @Log(title = "请假业务", businessType = BusinessType.UPDATE)
+    @PostMapping("/submitApply1/{id}")
+    @ResponseBody
+    public AjaxResult submitApply1(@PathVariable Long id) {
+        BizLeave leave = bizLeaveService.selectBizLeaveById(id);
+        String applyUserId = SecurityUtils.getUsername();
+        bizLeaveService.submitApply1(leave, applyUserId, "leave", new HashMap<>());
+        return AjaxResult.success();
+    }
+
+    /**
      * 我的待办列表
+     *
      * @return
      */
     @GetMapping("/taskList")
@@ -143,7 +166,21 @@ public class BizLeaveController extends BaseController {
     }
 
     /**
+     * 我的待办列表
+     *
+     * @return
+     */
+    @GetMapping("/taskList1")
+    @ResponseBody
+    public TableDataInfo taskList1(BizLeave bizLeave) {
+        bizLeave.setType("leave");
+        List<BizLeave> list = bizLeaveService.findTodoTasks1(bizLeave, SecurityUtils.getUsername());
+        return getDataTable(list);
+    }
+
+    /**
      * 我的已办列表
+     *
      * @param bizLeave
      * @return
      */
@@ -157,6 +194,7 @@ public class BizLeaveController extends BaseController {
 
     /**
      * 首页信息
+     *
      * @param
      * @return
      */
@@ -206,10 +244,33 @@ public class BizLeaveController extends BaseController {
         rtnObj.put("number3", number3);
         rtnObj.put("number4", number4);
 
-
         return rtnObj;
     }
 
+    /**
+     * 首页信息
+     *
+     * @param
+     * @return
+     */
+    @GetMapping("/userlist")
+    @ResponseBody
+    public JSONArray getUserList() {
+        JSONArray rtnArr = new JSONArray();
+        JSONObject data = null;
 
+        List<SysUser> list = bizLeaveService.getUserList();
+        if (list != null && !list.isEmpty()) {
+            for (SysUser user : list) {
+                data = new JSONObject();
+                String nickName = user.getNickName();
+                String userName = user.getUserName();
+                data.put("value", userName);
+                data.put("label", nickName);
+                rtnArr.add(data);
+            }
+        }
+        return rtnArr;
+    }
 
 }

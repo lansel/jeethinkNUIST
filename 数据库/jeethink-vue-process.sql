@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50724
 File Encoding         : 65001
 
-Date: 2021-05-09 17:00:33
+Date: 2021-05-10 00:09:55
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -80,7 +80,7 @@ CREATE TABLE `act_ge_property` (
 -- Records of act_ge_property
 -- ----------------------------
 INSERT INTO `act_ge_property` VALUES ('cfg.execution-related-entities-count', 'false', '1');
-INSERT INTO `act_ge_property` VALUES ('next.dbid', '2501', '2');
+INSERT INTO `act_ge_property` VALUES ('next.dbid', '7501', '4');
 INSERT INTO `act_ge_property` VALUES ('schema.history', 'create(6.0.0.4)', '1');
 INSERT INTO `act_ge_property` VALUES ('schema.version', '6.0.0.4', '1');
 
@@ -118,12 +118,26 @@ INSERT INTO `act_hi_actinst` VALUES ('16', 'leave:2:11', '12', '15', 'startevent
 INSERT INTO `act_hi_actinst` VALUES ('17', 'leave:2:11', '12', '15', 'deptLeaderVerify', '18', null, '主管审批', 'userTask', 'axianlu', '2021-05-06 16:34:56.086', '2021-05-06 16:36:03.679', '67593', null, '');
 INSERT INTO `act_hi_actinst` VALUES ('24', 'leave:2:11', '12', '15', 'exclusivegateway5', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2021-05-06 16:36:03.679', '2021-05-06 16:36:03.714', '35', null, '');
 INSERT INTO `act_hi_actinst` VALUES ('25', 'leave:2:11', '12', '15', 'hrVerify', '26', null, '总经理审批', 'userTask', 'rensm', '2021-05-06 16:36:03.715', '2021-05-06 20:22:39.385', '13595670', null, '');
+INSERT INTO `act_hi_actinst` VALUES ('2505', 'leave:2:11', '2501', '2504', 'startevent1', null, null, 'Start', 'startEvent', null, '2021-05-09 17:53:16.649', '2021-05-09 17:53:16.693', '44', null, '');
+INSERT INTO `act_hi_actinst` VALUES ('2506', 'leave:2:11', '2501', '2504', 'deptLeaderVerify', '2507', null, '主管审批', 'userTask', null, '2021-05-09 17:53:16.750', null, null, null, '');
+INSERT INTO `act_hi_actinst` VALUES ('2513', 'leave:2:11', '2509', '2512', 'startevent1', null, null, 'Start', 'startEvent', null, '2021-05-09 17:57:06.319', '2021-05-09 17:57:06.320', '1', null, '');
+INSERT INTO `act_hi_actinst` VALUES ('2514', 'leave:2:11', '2509', '2512', 'deptLeaderVerify', '2515', null, '主管审批', 'userTask', null, '2021-05-09 17:57:06.321', null, null, null, '');
+INSERT INTO `act_hi_actinst` VALUES ('2521', 'leave:2:11', '2517', '2520', 'startevent1', null, null, 'Start', 'startEvent', null, '2021-05-09 18:23:14.949', '2021-05-09 18:23:14.949', '0', null, '');
+INSERT INTO `act_hi_actinst` VALUES ('2522', 'leave:2:11', '2517', '2520', 'deptLeaderVerify', '2523', null, '主管审批', 'userTask', null, '2021-05-09 18:23:14.949', null, null, null, '');
+INSERT INTO `act_hi_actinst` VALUES ('2529', 'leave:2:11', '2525', '2528', 'startevent1', null, null, 'Start', 'startEvent', null, '2021-05-09 18:59:27.192', '2021-05-09 18:59:27.193', '1', null, '');
+INSERT INTO `act_hi_actinst` VALUES ('2530', 'leave:2:11', '2525', '2528', 'deptLeaderVerify', '2531', null, '主管审批', 'userTask', null, '2021-05-09 18:59:27.193', null, null, null, '');
 INSERT INTO `act_hi_actinst` VALUES ('31', 'leave:2:11', '12', '15', 'exclusivegateway6', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2021-05-06 20:22:39.385', '2021-05-06 20:22:39.385', '0', null, '');
 INSERT INTO `act_hi_actinst` VALUES ('32', 'leave:2:11', '12', '15', 'modifyApply', '33', null, '调整申请', 'userTask', 'chengxy', '2021-05-06 20:22:39.386', '2021-05-06 20:52:10.133', '1770747', '用户撤销', '');
 INSERT INTO `act_hi_actinst` VALUES ('38', 'leave:2:11', '34', '37', 'startevent1', null, null, 'Start', 'startEvent', null, '2021-05-06 20:56:29.693', '2021-05-06 20:56:29.693', '0', null, '');
 INSERT INTO `act_hi_actinst` VALUES ('39', 'leave:2:11', '34', '37', 'deptLeaderVerify', '40', null, '主管审批', 'userTask', 'axianlu', '2021-05-06 20:56:29.693', '2021-05-06 20:56:49.535', '19842', null, '');
 INSERT INTO `act_hi_actinst` VALUES ('46', 'leave:2:11', '42', '45', 'startevent1', null, null, 'Start', 'startEvent', null, '2021-05-06 20:56:34.222', '2021-05-06 20:56:34.222', '0', null, '');
 INSERT INTO `act_hi_actinst` VALUES ('47', 'leave:2:11', '42', '45', 'deptLeaderVerify', '48', null, '主管审批', 'userTask', null, '2021-05-06 20:56:34.222', null, null, null, '');
+INSERT INTO `act_hi_actinst` VALUES ('5005', 'leave:2:11', '5001', '5004', 'startevent1', null, null, 'Start', 'startEvent', null, '2021-05-09 23:54:33.748', '2021-05-09 23:54:33.755', '7', null, '');
+INSERT INTO `act_hi_actinst` VALUES ('5006', 'leave:2:11', '5001', '5004', 'deptLeaderVerify', '5007', null, '主管审批', 'userTask', null, '2021-05-09 23:54:33.765', null, null, null, '');
+INSERT INTO `act_hi_actinst` VALUES ('5045', 'leave:2:11', '5041', '5044', 'startevent1', null, null, 'Start', 'startEvent', null, '2021-05-10 00:01:30.750', '2021-05-10 00:01:30.750', '0', null, '');
+INSERT INTO `act_hi_actinst` VALUES ('5046', 'leave:2:11', '5041', '5044', 'deptLeaderVerify', '5047', null, '主管审批', 'userTask', null, '2021-05-10 00:01:30.750', null, null, null, '');
+INSERT INTO `act_hi_actinst` VALUES ('5053', 'leave:2:11', '5049', '5052', 'startevent1', null, null, 'Start', 'startEvent', null, '2021-05-10 00:02:12.268', '2021-05-10 00:02:12.268', '0', null, '');
+INSERT INTO `act_hi_actinst` VALUES ('5054', 'leave:2:11', '5049', '5052', 'deptLeaderVerify', '5055', null, '主管审批', 'userTask', null, '2021-05-10 00:02:12.268', null, null, null, '');
 INSERT INTO `act_hi_actinst` VALUES ('54', 'leave:2:11', '34', '37', 'exclusivegateway5', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2021-05-06 20:56:49.535', '2021-05-06 20:56:49.535', '0', null, '');
 INSERT INTO `act_hi_actinst` VALUES ('55', 'leave:2:11', '34', '37', 'hrVerify', '56', null, '总经理审批', 'userTask', 'rensm', '2021-05-06 20:56:49.535', '2021-05-06 20:57:10.610', '21075', null, '');
 INSERT INTO `act_hi_actinst` VALUES ('63', 'leave:2:11', '34', '37', 'exclusivegateway6', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2021-05-06 20:57:10.610', '2021-05-06 20:57:10.611', '1', null, '');
@@ -241,12 +255,26 @@ CREATE TABLE `act_hi_identitylink` (
 INSERT INTO `act_hi_identitylink` VALUES ('14', null, 'starter', 'chengxy', null, '12');
 INSERT INTO `act_hi_identitylink` VALUES ('19', 'deptLeader', 'candidate', null, '18', null);
 INSERT INTO `act_hi_identitylink` VALUES ('23', null, 'participant', 'axianlu', null, '12');
+INSERT INTO `act_hi_identitylink` VALUES ('2503', null, 'starter', 'chengxy', null, '2501');
+INSERT INTO `act_hi_identitylink` VALUES ('2508', 'deptLeader', 'candidate', null, '2507', null);
+INSERT INTO `act_hi_identitylink` VALUES ('2511', null, 'starter', 'chengxy', null, '2509');
+INSERT INTO `act_hi_identitylink` VALUES ('2516', 'deptLeader', 'candidate', null, '2515', null);
+INSERT INTO `act_hi_identitylink` VALUES ('2519', null, 'starter', 'chengxy', null, '2517');
+INSERT INTO `act_hi_identitylink` VALUES ('2524', 'deptLeader', 'candidate', null, '2523', null);
+INSERT INTO `act_hi_identitylink` VALUES ('2527', null, 'starter', 'chengxy', null, '2525');
+INSERT INTO `act_hi_identitylink` VALUES ('2532', 'deptLeader', 'candidate', null, '2531', null);
 INSERT INTO `act_hi_identitylink` VALUES ('27', 'hr', 'candidate', null, '26', null);
 INSERT INTO `act_hi_identitylink` VALUES ('30', null, 'participant', 'rensm', null, '12');
 INSERT INTO `act_hi_identitylink` VALUES ('36', null, 'starter', 'chengxy', null, '34');
 INSERT INTO `act_hi_identitylink` VALUES ('41', 'deptLeader', 'candidate', null, '40', null);
 INSERT INTO `act_hi_identitylink` VALUES ('44', null, 'starter', 'chengxy', null, '42');
 INSERT INTO `act_hi_identitylink` VALUES ('49', 'deptLeader', 'candidate', null, '48', null);
+INSERT INTO `act_hi_identitylink` VALUES ('5003', null, 'starter', 'chengxy', null, '5001');
+INSERT INTO `act_hi_identitylink` VALUES ('5008', 'deptLeader', 'candidate', null, '5007', null);
+INSERT INTO `act_hi_identitylink` VALUES ('5043', null, 'starter', 'chengxy', null, '5041');
+INSERT INTO `act_hi_identitylink` VALUES ('5048', 'deptLeader', 'candidate', null, '5047', null);
+INSERT INTO `act_hi_identitylink` VALUES ('5051', null, 'starter', 'chengxy', null, '5049');
+INSERT INTO `act_hi_identitylink` VALUES ('5056', 'deptLeader', 'candidate', null, '5055', null);
 INSERT INTO `act_hi_identitylink` VALUES ('53', null, 'participant', 'axianlu', null, '34');
 INSERT INTO `act_hi_identitylink` VALUES ('57', 'hr', 'candidate', null, '56', null);
 INSERT INTO `act_hi_identitylink` VALUES ('62', null, 'participant', 'rensm', null, '34');
@@ -285,8 +313,15 @@ CREATE TABLE `act_hi_procinst` (
 -- Records of act_hi_procinst
 -- ----------------------------
 INSERT INTO `act_hi_procinst` VALUES ('12', '12', '35', 'leave:2:11', '2021-05-06 16:34:56.042', '2021-05-06 20:52:10.292', '15434250', 'chengxy', 'startevent1', null, null, '用户撤销', '', null);
+INSERT INTO `act_hi_procinst` VALUES ('2501', '2501', '39', 'leave:2:11', '2021-05-09 17:53:16.403', null, null, 'chengxy', 'startevent1', null, null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('2509', '2509', '40', 'leave:2:11', '2021-05-09 17:57:06.316', null, null, 'chengxy', 'startevent1', null, null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('2517', '2517', '41', 'leave:2:11', '2021-05-09 18:23:14.949', null, null, 'chengxy', 'startevent1', null, null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('2525', '2525', '42', 'leave:2:11', '2021-05-09 18:59:27.192', null, null, 'chengxy', 'startevent1', null, null, null, '', null);
 INSERT INTO `act_hi_procinst` VALUES ('34', '34', '36', 'leave:2:11', '2021-05-06 20:56:29.693', null, null, 'chengxy', 'startevent1', null, null, null, '', null);
 INSERT INTO `act_hi_procinst` VALUES ('42', '42', '37', 'leave:2:11', '2021-05-06 20:56:34.221', null, null, 'chengxy', 'startevent1', null, null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('5001', '5001', '48', 'leave:2:11', '2021-05-09 23:54:33.647', null, null, 'chengxy', 'startevent1', null, null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('5041', '5041', '49', 'leave:2:11', '2021-05-10 00:01:30.750', null, null, 'chengxy', 'startevent1', null, null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('5049', '5049', '50', 'leave:2:11', '2021-05-10 00:02:12.268', null, null, 'chengxy', 'startevent1', null, null, null, '', null);
 INSERT INTO `act_hi_procinst` VALUES ('66', '66', '38', 'leave:2:11', '2021-05-06 21:01:12.495', '2021-05-06 21:08:16.947', '424452', 'chengxy', 'startevent1', 'endevent1', null, null, '', null);
 
 -- ----------------------------
@@ -322,10 +357,17 @@ CREATE TABLE `act_hi_taskinst` (
 -- Records of act_hi_taskinst
 -- ----------------------------
 INSERT INTO `act_hi_taskinst` VALUES ('18', 'leave:2:11', 'deptLeaderVerify', '12', '15', '主管审批', null, null, null, 'axianlu', '2021-05-06 16:34:56.172', '2021-05-06 16:36:03.659', '2021-05-06 16:36:03.675', '67503', null, '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('2507', 'leave:2:11', 'deptLeaderVerify', '2501', '2504', '主管审批', null, null, null, null, '2021-05-09 17:53:17.407', null, null, null, null, '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('2515', 'leave:2:11', 'deptLeaderVerify', '2509', '2512', '主管审批', null, null, null, null, '2021-05-09 17:57:06.322', null, null, null, null, '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('2523', 'leave:2:11', 'deptLeaderVerify', '2517', '2520', '主管审批', null, null, null, null, '2021-05-09 18:23:14.949', null, null, null, null, '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('2531', 'leave:2:11', 'deptLeaderVerify', '2525', '2528', '主管审批', null, null, null, null, '2021-05-09 18:59:27.193', null, null, null, null, '50', null, null, null, '');
 INSERT INTO `act_hi_taskinst` VALUES ('26', 'leave:2:11', 'hrVerify', '12', '15', '总经理审批', null, null, null, 'rensm', '2021-05-06 16:36:03.715', '2021-05-06 20:22:39.301', '2021-05-06 20:22:39.383', '13595668', null, '50', null, null, null, '');
 INSERT INTO `act_hi_taskinst` VALUES ('33', 'leave:2:11', 'modifyApply', '12', '15', '调整申请', null, null, null, 'chengxy', '2021-05-06 20:22:39.386', null, '2021-05-06 20:52:10.106', '1770720', '用户撤销', '50', null, null, null, '');
 INSERT INTO `act_hi_taskinst` VALUES ('40', 'leave:2:11', 'deptLeaderVerify', '34', '37', '主管审批', null, null, null, 'axianlu', '2021-05-06 20:56:29.693', '2021-05-06 20:56:49.521', '2021-05-06 20:56:49.534', '19841', null, '50', null, null, null, '');
 INSERT INTO `act_hi_taskinst` VALUES ('48', 'leave:2:11', 'deptLeaderVerify', '42', '45', '主管审批', null, null, null, null, '2021-05-06 20:56:34.222', null, null, null, null, '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('5007', 'leave:2:11', 'deptLeaderVerify', '5001', '5004', '主管审批', null, null, null, null, '2021-05-09 23:54:33.820', null, null, null, null, '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('5047', 'leave:2:11', 'deptLeaderVerify', '5041', '5044', '主管审批', null, null, null, null, '2021-05-10 00:01:30.750', null, null, null, null, '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('5055', 'leave:2:11', 'deptLeaderVerify', '5049', '5052', '主管审批', null, null, null, null, '2021-05-10 00:02:12.268', null, null, null, null, '50', null, null, null, '');
 INSERT INTO `act_hi_taskinst` VALUES ('56', 'leave:2:11', 'hrVerify', '34', '37', '总经理审批', null, null, null, 'rensm', '2021-05-06 20:56:49.535', '2021-05-06 20:57:10.523', '2021-05-06 20:57:10.609', '21074', null, '50', null, null, null, '');
 INSERT INTO `act_hi_taskinst` VALUES ('65', 'leave:2:11', 'reportBack', '34', '37', '项目启动确认', null, null, null, 'chengxy', '2021-05-06 20:57:10.611', null, null, null, null, '50', null, null, null, '');
 INSERT INTO `act_hi_taskinst` VALUES ('72', 'leave:2:11', 'deptLeaderVerify', '66', '69', '主管审批', null, null, null, 'axianlu', '2021-05-06 21:01:12.496', '2021-05-06 21:01:49.104', '2021-05-06 21:01:49.166', '36670', null, '50', null, null, null, '');
@@ -363,9 +405,16 @@ CREATE TABLE `act_hi_varinst` (
 INSERT INTO `act_hi_varinst` VALUES ('13', '12', '12', null, 'applyUserId', 'string', '0', null, null, null, 'chengxy', null, '2021-05-06 16:34:56.043', '2021-05-06 16:34:56.043');
 INSERT INTO `act_hi_varinst` VALUES ('21', '12', '12', null, 'deptLeaderApproved', 'boolean', '1', null, null, '1', null, null, '2021-05-06 16:36:03.520', '2021-05-06 16:36:03.672');
 INSERT INTO `act_hi_varinst` VALUES ('22', '12', '12', null, 'comment', 'string', '3', null, null, null, '阿萨德阿萨德阿萨德', null, '2021-05-06 16:36:03.520', '2021-05-06 20:22:39.380');
+INSERT INTO `act_hi_varinst` VALUES ('2502', '2501', '2501', null, 'applyUserId', 'string', '0', null, null, null, 'chengxy', null, '2021-05-09 17:53:16.549', '2021-05-09 17:53:16.549');
+INSERT INTO `act_hi_varinst` VALUES ('2510', '2509', '2509', null, 'applyUserId', 'string', '0', null, null, null, 'chengxy', null, '2021-05-09 17:57:06.317', '2021-05-09 17:57:06.317');
+INSERT INTO `act_hi_varinst` VALUES ('2518', '2517', '2517', null, 'applyUserId', 'string', '0', null, null, null, 'chengxy', null, '2021-05-09 18:23:14.949', '2021-05-09 18:23:14.949');
+INSERT INTO `act_hi_varinst` VALUES ('2526', '2525', '2525', null, 'applyUserId', 'string', '0', null, null, null, 'chengxy', null, '2021-05-09 18:59:27.192', '2021-05-09 18:59:27.192');
 INSERT INTO `act_hi_varinst` VALUES ('29', '12', '12', null, 'hrApproved', 'boolean', '1', null, null, '0', null, null, '2021-05-06 20:22:39.271', '2021-05-06 20:22:39.381');
 INSERT INTO `act_hi_varinst` VALUES ('35', '34', '34', null, 'applyUserId', 'string', '0', null, null, null, 'chengxy', null, '2021-05-06 20:56:29.693', '2021-05-06 20:56:29.693');
 INSERT INTO `act_hi_varinst` VALUES ('43', '42', '42', null, 'applyUserId', 'string', '0', null, null, null, 'chengxy', null, '2021-05-06 20:56:34.221', '2021-05-06 20:56:34.221');
+INSERT INTO `act_hi_varinst` VALUES ('5002', '5001', '5001', null, 'applyUserId', 'string', '0', null, null, null, 'chengxy', null, '2021-05-09 23:54:33.729', '2021-05-09 23:54:33.729');
+INSERT INTO `act_hi_varinst` VALUES ('5042', '5041', '5041', null, 'applyUserId', 'string', '0', null, null, null, 'chengxy', null, '2021-05-10 00:01:30.750', '2021-05-10 00:01:30.750');
+INSERT INTO `act_hi_varinst` VALUES ('5050', '5049', '5049', null, 'applyUserId', 'string', '0', null, null, null, 'chengxy', null, '2021-05-10 00:02:12.268', '2021-05-10 00:02:12.268');
 INSERT INTO `act_hi_varinst` VALUES ('51', '34', '34', null, 'deptLeaderApproved', 'boolean', '1', null, null, '1', null, null, '2021-05-06 20:56:49.447', '2021-05-06 20:56:49.531');
 INSERT INTO `act_hi_varinst` VALUES ('52', '34', '34', null, 'comment', 'string', '3', null, null, null, '阿达的阿萨德', null, '2021-05-06 20:56:49.447', '2021-05-06 20:57:10.606');
 INSERT INTO `act_hi_varinst` VALUES ('59', '34', '34', null, 'hrApproved', 'boolean', '1', null, null, '1', null, null, '2021-05-06 20:57:10.445', '2021-05-06 20:57:10.607');
@@ -591,10 +640,24 @@ CREATE TABLE `act_ru_execution` (
 -- ----------------------------
 -- Records of act_ru_execution
 -- ----------------------------
+INSERT INTO `act_ru_execution` VALUES ('2501', '1', '2501', '39', null, 'leave:2:11', null, '2501', null, '1', '0', '1', '0', '0', '1', null, '', null, '2021-05-09 17:53:16.403', 'chengxy', null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `act_ru_execution` VALUES ('2504', '1', '2501', null, '2501', 'leave:2:11', null, '2501', 'deptLeaderVerify', '1', '0', '0', '0', '0', '1', null, '', null, '2021-05-09 17:53:16.604', null, null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `act_ru_execution` VALUES ('2509', '1', '2509', '40', null, 'leave:2:11', null, '2509', null, '1', '0', '1', '0', '0', '1', null, '', null, '2021-05-09 17:57:06.316', 'chengxy', null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `act_ru_execution` VALUES ('2512', '1', '2509', null, '2509', 'leave:2:11', null, '2509', 'deptLeaderVerify', '1', '0', '0', '0', '0', '1', null, '', null, '2021-05-09 17:57:06.318', null, null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `act_ru_execution` VALUES ('2517', '1', '2517', '41', null, 'leave:2:11', null, '2517', null, '1', '0', '1', '0', '0', '1', null, '', null, '2021-05-09 18:23:14.949', 'chengxy', null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `act_ru_execution` VALUES ('2520', '1', '2517', null, '2517', 'leave:2:11', null, '2517', 'deptLeaderVerify', '1', '0', '0', '0', '0', '1', null, '', null, '2021-05-09 18:23:14.949', null, null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `act_ru_execution` VALUES ('2525', '1', '2525', '42', null, 'leave:2:11', null, '2525', null, '1', '0', '1', '0', '0', '1', null, '', null, '2021-05-09 18:59:27.192', 'chengxy', null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `act_ru_execution` VALUES ('2528', '1', '2525', null, '2525', 'leave:2:11', null, '2525', 'deptLeaderVerify', '1', '0', '0', '0', '0', '1', null, '', null, '2021-05-09 18:59:27.192', null, null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `act_ru_execution` VALUES ('34', '1', '34', '36', null, 'leave:2:11', null, '34', null, '1', '0', '1', '0', '0', '1', null, '', null, '2021-05-06 20:56:29.693', 'chengxy', null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `act_ru_execution` VALUES ('37', '3', '34', null, '34', 'leave:2:11', null, '34', 'reportBack', '1', '0', '0', '0', '0', '1', null, '', null, '2021-05-06 20:56:29.693', null, null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `act_ru_execution` VALUES ('42', '1', '42', '37', null, 'leave:2:11', null, '42', null, '1', '0', '1', '0', '0', '1', null, '', null, '2021-05-06 20:56:34.221', 'chengxy', null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `act_ru_execution` VALUES ('45', '1', '42', null, '42', 'leave:2:11', null, '42', 'deptLeaderVerify', '1', '0', '0', '0', '0', '1', null, '', null, '2021-05-06 20:56:34.222', null, null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `act_ru_execution` VALUES ('5001', '1', '5001', '48', null, 'leave:2:11', null, '5001', null, '1', '0', '1', '0', '0', '1', null, '', null, '2021-05-09 23:54:33.647', 'chengxy', null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `act_ru_execution` VALUES ('5004', '1', '5001', null, '5001', 'leave:2:11', null, '5001', 'deptLeaderVerify', '1', '0', '0', '0', '0', '1', null, '', null, '2021-05-09 23:54:33.739', null, null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `act_ru_execution` VALUES ('5041', '1', '5041', '49', null, 'leave:2:11', null, '5041', null, '1', '0', '1', '0', '0', '1', null, '', null, '2021-05-10 00:01:30.750', 'chengxy', null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `act_ru_execution` VALUES ('5044', '1', '5041', null, '5041', 'leave:2:11', null, '5041', 'deptLeaderVerify', '1', '0', '0', '0', '0', '1', null, '', null, '2021-05-10 00:01:30.750', null, null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `act_ru_execution` VALUES ('5049', '1', '5049', '50', null, 'leave:2:11', null, '5049', null, '1', '0', '1', '0', '0', '1', null, '', null, '2021-05-10 00:02:12.268', 'chengxy', null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `act_ru_execution` VALUES ('5052', '1', '5049', null, '5049', 'leave:2:11', null, '5049', 'deptLeaderVerify', '1', '0', '0', '0', '0', '1', null, '', null, '2021-05-10 00:02:12.268', null, null, '0', '0', '0', '0', '0', '0', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for act_ru_identitylink
@@ -623,9 +686,23 @@ CREATE TABLE `act_ru_identitylink` (
 -- ----------------------------
 -- Records of act_ru_identitylink
 -- ----------------------------
+INSERT INTO `act_ru_identitylink` VALUES ('2503', '1', null, 'starter', 'chengxy', null, '2501', null);
+INSERT INTO `act_ru_identitylink` VALUES ('2508', '1', 'deptLeader', 'candidate', null, '2507', null, null);
+INSERT INTO `act_ru_identitylink` VALUES ('2511', '1', null, 'starter', 'chengxy', null, '2509', null);
+INSERT INTO `act_ru_identitylink` VALUES ('2516', '1', 'deptLeader', 'candidate', null, '2515', null, null);
+INSERT INTO `act_ru_identitylink` VALUES ('2519', '1', null, 'starter', 'chengxy', null, '2517', null);
+INSERT INTO `act_ru_identitylink` VALUES ('2524', '1', 'deptLeader', 'candidate', null, '2523', null, null);
+INSERT INTO `act_ru_identitylink` VALUES ('2527', '1', null, 'starter', 'chengxy', null, '2525', null);
+INSERT INTO `act_ru_identitylink` VALUES ('2532', '1', 'deptLeader', 'candidate', null, '2531', null, null);
 INSERT INTO `act_ru_identitylink` VALUES ('36', '1', null, 'starter', 'chengxy', null, '34', null);
 INSERT INTO `act_ru_identitylink` VALUES ('44', '1', null, 'starter', 'chengxy', null, '42', null);
 INSERT INTO `act_ru_identitylink` VALUES ('49', '1', 'deptLeader', 'candidate', null, '48', null, null);
+INSERT INTO `act_ru_identitylink` VALUES ('5003', '1', null, 'starter', 'chengxy', null, '5001', null);
+INSERT INTO `act_ru_identitylink` VALUES ('5008', '1', 'deptLeader', 'candidate', null, '5007', null, null);
+INSERT INTO `act_ru_identitylink` VALUES ('5043', '1', null, 'starter', 'chengxy', null, '5041', null);
+INSERT INTO `act_ru_identitylink` VALUES ('5048', '1', 'deptLeader', 'candidate', null, '5047', null, null);
+INSERT INTO `act_ru_identitylink` VALUES ('5051', '1', null, 'starter', 'chengxy', null, '5049', null);
+INSERT INTO `act_ru_identitylink` VALUES ('5056', '1', 'deptLeader', 'candidate', null, '5055', null, null);
 INSERT INTO `act_ru_identitylink` VALUES ('53', '1', null, 'participant', 'axianlu', null, '34', null);
 INSERT INTO `act_ru_identitylink` VALUES ('62', '1', null, 'participant', 'rensm', null, '34', null);
 
@@ -739,7 +816,14 @@ CREATE TABLE `act_ru_task` (
 -- ----------------------------
 -- Records of act_ru_task
 -- ----------------------------
+INSERT INTO `act_ru_task` VALUES ('2507', '1', '2504', '2501', 'leave:2:11', '主管审批', null, null, 'deptLeaderVerify', null, null, null, '50', '2021-05-09 17:53:16.751', null, null, '1', '', null, null);
+INSERT INTO `act_ru_task` VALUES ('2515', '1', '2512', '2509', 'leave:2:11', '主管审批', null, null, 'deptLeaderVerify', null, null, null, '50', '2021-05-09 17:57:06.321', null, null, '1', '', null, null);
+INSERT INTO `act_ru_task` VALUES ('2523', '1', '2520', '2517', 'leave:2:11', '主管审批', null, null, 'deptLeaderVerify', null, null, null, '50', '2021-05-09 18:23:14.949', null, null, '1', '', null, null);
+INSERT INTO `act_ru_task` VALUES ('2531', '1', '2528', '2525', 'leave:2:11', '主管审批', null, null, 'deptLeaderVerify', null, null, null, '50', '2021-05-09 18:59:27.193', null, null, '1', '', null, null);
 INSERT INTO `act_ru_task` VALUES ('48', '1', '45', '42', 'leave:2:11', '主管审批', null, null, 'deptLeaderVerify', null, null, null, '50', '2021-05-06 20:56:34.222', null, null, '1', '', null, null);
+INSERT INTO `act_ru_task` VALUES ('5007', '1', '5004', '5001', 'leave:2:11', '主管审批', null, null, 'deptLeaderVerify', null, null, null, '50', '2021-05-09 23:54:33.765', null, null, '1', '', null, null);
+INSERT INTO `act_ru_task` VALUES ('5047', '1', '5044', '5041', 'leave:2:11', '主管审批', null, null, 'deptLeaderVerify', null, null, null, '50', '2021-05-10 00:01:30.750', null, null, '1', '', null, null);
+INSERT INTO `act_ru_task` VALUES ('5055', '1', '5052', '5049', 'leave:2:11', '主管审批', null, null, 'deptLeaderVerify', null, null, null, '50', '2021-05-10 00:02:12.268', null, null, '1', '', null, null);
 INSERT INTO `act_ru_task` VALUES ('65', '1', '37', '34', 'leave:2:11', '项目启动确认', null, null, 'reportBack', null, 'chengxy', null, '50', '2021-05-06 20:57:10.611', null, null, '1', '', null, null);
 
 -- ----------------------------
@@ -809,8 +893,15 @@ CREATE TABLE `act_ru_variable` (
 -- ----------------------------
 -- Records of act_ru_variable
 -- ----------------------------
+INSERT INTO `act_ru_variable` VALUES ('2502', '1', 'string', 'applyUserId', '2501', '2501', null, null, null, null, 'chengxy', null);
+INSERT INTO `act_ru_variable` VALUES ('2510', '1', 'string', 'applyUserId', '2509', '2509', null, null, null, null, 'chengxy', null);
+INSERT INTO `act_ru_variable` VALUES ('2518', '1', 'string', 'applyUserId', '2517', '2517', null, null, null, null, 'chengxy', null);
+INSERT INTO `act_ru_variable` VALUES ('2526', '1', 'string', 'applyUserId', '2525', '2525', null, null, null, null, 'chengxy', null);
 INSERT INTO `act_ru_variable` VALUES ('35', '1', 'string', 'applyUserId', '34', '34', null, null, null, null, 'chengxy', null);
 INSERT INTO `act_ru_variable` VALUES ('43', '1', 'string', 'applyUserId', '42', '42', null, null, null, null, 'chengxy', null);
+INSERT INTO `act_ru_variable` VALUES ('5002', '1', 'string', 'applyUserId', '5001', '5001', null, null, null, null, 'chengxy', null);
+INSERT INTO `act_ru_variable` VALUES ('5042', '1', 'string', 'applyUserId', '5041', '5041', null, null, null, null, 'chengxy', null);
+INSERT INTO `act_ru_variable` VALUES ('5050', '1', 'string', 'applyUserId', '5049', '5049', null, null, null, null, 'chengxy', null);
 INSERT INTO `act_ru_variable` VALUES ('51', '1', 'boolean', 'deptLeaderApproved', '34', '34', null, null, null, '1', null, null);
 INSERT INTO `act_ru_variable` VALUES ('52', '2', 'string', 'comment', '34', '34', null, null, null, null, '阿达的阿萨德', null);
 INSERT INTO `act_ru_variable` VALUES ('59', '1', 'boolean', 'hrApproved', '34', '34', null, null, null, '1', null, null);
@@ -836,16 +927,29 @@ CREATE TABLE `biz_leave` (
   `apply_time` datetime DEFAULT NULL COMMENT '申请时间',
   `reality_start_time` datetime DEFAULT NULL COMMENT '实际开始时间',
   `reality_end_time` datetime DEFAULT NULL COMMENT '实际结束时间',
+  `leaders` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of biz_leave
 -- ----------------------------
-INSERT INTO `biz_leave` VALUES ('35', 'leave', '123123123123', '123123123123123', '2021-05-13 00:00:00', '2021-06-25 00:00:00', '3715200', '12', 'chengxy', '2021-05-06 16:34:51', 'chengxy', null, 'chengxy', '2021-05-06 16:34:56', null, null);
-INSERT INTO `biz_leave` VALUES ('36', 'leave', '阿萨德发斯蒂芬', '阿斯顿发生发撒的发帅法', '2021-05-11 00:00:00', '2021-06-17 00:00:00', '3196800', '34', 'chengxy', '2021-05-06 20:52:35', 'chengxy', '2021-05-06 20:54:50', 'chengxy', '2021-05-06 20:56:30', null, null);
-INSERT INTO `biz_leave` VALUES ('37', 'leave', '发撒的发阿萨德飞撒的发', '阿萨德飞阿萨德飞阿萨德飞', '2021-04-26 00:00:00', '2021-07-03 00:00:00', '5875200', '42', 'chengxy', '2021-05-06 20:55:42', 'chengxy', null, 'chengxy', '2021-05-06 20:56:34', null, null);
-INSERT INTO `biz_leave` VALUES ('38', 'leave', '004', 'asdasdasdasdasd', '2021-05-03 00:00:00', '2021-06-25 00:00:00', '4579200', '66', 'chengxy', '2021-05-06 21:01:09', 'chengxy', '2021-05-06 21:08:17', 'chengxy', '2021-05-06 21:01:12', '2021-05-03 00:00:00', '2021-05-29 00:00:00');
+INSERT INTO `biz_leave` VALUES ('35', 'leave', '123123123123', '123123123123123', '2021-05-13 00:00:00', '2021-06-25 00:00:00', '3715200', '12', 'chengxy', '2021-05-06 16:34:51', 'chengxy', null, 'chengxy', '2021-05-06 16:34:56', null, null, null);
+INSERT INTO `biz_leave` VALUES ('36', 'leave', '阿萨德发斯蒂芬', '阿斯顿发生发撒的发帅法', '2021-05-11 00:00:00', '2021-06-17 00:00:00', '3196800', '34', 'chengxy', '2021-05-06 20:52:35', 'chengxy', '2021-05-06 20:54:50', 'chengxy', '2021-05-06 20:56:30', null, null, null);
+INSERT INTO `biz_leave` VALUES ('37', 'leave', '发撒的发阿萨德飞撒的发', '阿萨德飞阿萨德飞阿萨德飞', '2021-04-26 00:00:00', '2021-07-03 00:00:00', '5875200', '42', 'chengxy', '2021-05-06 20:55:42', 'chengxy', null, 'chengxy', '2021-05-06 20:56:34', null, null, null);
+INSERT INTO `biz_leave` VALUES ('38', 'leave', '004', 'asdasdasdasdasd', '2021-05-03 00:00:00', '2021-06-25 00:00:00', '4579200', '66', 'chengxy', '2021-05-06 21:01:09', 'chengxy', '2021-05-06 21:08:17', 'chengxy', '2021-05-06 21:01:12', '2021-05-03 00:00:00', '2021-05-29 00:00:00', null);
+INSERT INTO `biz_leave` VALUES ('39', 'leave', '0509测试', '暗杀大神大所的', '2021-05-19 00:00:00', '2021-06-17 00:00:00', '2505600', '2501', 'chengxy', '2021-05-09 17:42:09', 'chengxy', null, 'chengxy', '2021-05-09 17:51:57', null, null, null);
+INSERT INTO `biz_leave` VALUES ('40', 'leave', '0509测试002', '撒的发是梵蒂冈', '2021-05-04 00:00:00', '2021-06-17 00:00:00', '3801600', '2509', 'chengxy', '2021-05-09 17:56:27', 'chengxy', null, 'chengxy', '2021-05-09 17:56:58', null, null, null);
+INSERT INTO `biz_leave` VALUES ('41', 'leave', '0509测试003', '0509测试003', '2021-05-13 00:00:00', '2021-06-30 00:00:00', '4147200', '2517', 'chengxy', '2021-05-09 18:23:12', 'chengxy', null, 'chengxy', '2021-05-09 18:23:15', null, null, null);
+INSERT INTO `biz_leave` VALUES ('42', 'leave', '测试006', '测试006', '2021-05-04 00:00:00', '2021-07-08 00:00:00', '5616000', '2525', 'chengxy', '2021-05-09 18:59:19', 'chengxy', null, 'chengxy', '2021-05-09 18:59:27', null, null, null);
+INSERT INTO `biz_leave` VALUES ('43', 'leave', 'qweqweqweqweqweqw', 'asdadasdasd', '2021-05-03 00:00:00', '2021-05-05 00:00:00', '172800', null, 'chengxy', '2021-05-09 23:30:45', '', null, null, null, null, null, null);
+INSERT INTO `biz_leave` VALUES ('44', 'leave', '123123', '123123123', '2021-05-20 00:00:00', '2021-07-02 00:00:00', '3715200', null, 'chengxy', '2021-05-09 23:32:22', '', null, null, null, null, null, null);
+INSERT INTO `biz_leave` VALUES ('45', 'leave', '12312313123123', '123123123123123', '2021-05-05 00:00:00', '2021-06-07 00:00:00', '2851200', null, 'chengxy', '2021-05-09 23:34:04', '', null, null, null, null, null, null);
+INSERT INTO `biz_leave` VALUES ('46', 'leave', '123123123123123', '123123123123123', '2021-05-16 00:00:00', '2021-05-22 00:00:00', '518400', null, 'chengxy', '2021-05-09 23:36:18', '', null, null, null, null, null, null);
+INSERT INTO `biz_leave` VALUES ('47', 'leave', '123123123123', '123123123123', '2021-05-17 00:00:00', '2021-06-23 00:00:00', '3196800', null, 'chengxy', '2021-05-09 23:38:39', '', null, null, null, null, null, 'axianlu;yezhuguan;');
+INSERT INTO `biz_leave` VALUES ('48', 'leave', '成败在此一举', '成败在此一举', '2021-05-05 00:00:00', '2021-06-14 00:00:00', '3456000', '5001', 'chengxy', '2021-05-09 23:50:17', 'chengxy', null, 'chengxy', '2021-05-09 23:54:33', null, null, 'yezhuguan;');
+INSERT INTO `biz_leave` VALUES ('49', 'leave', '成败在此一举2.0', '成败在此一举2.0', '2021-05-11 00:00:00', '2021-06-17 00:00:00', '3196800', '5041', 'chengxy', '2021-05-09 23:56:11', 'chengxy', null, 'chengxy', '2021-05-10 00:01:31', null, null, 'yezhuguan;');
+INSERT INTO `biz_leave` VALUES ('50', 'leave', '成败在此一举3.0', '阿萨德啊实打实的阿萨德', '2021-05-11 00:00:00', '2021-06-24 00:00:00', '3801600', '5049', 'chengxy', '2021-05-10 00:02:09', 'chengxy', null, 'chengxy', '2021-05-10 00:02:12', null, null, 'yezhuguan;');
 
 -- ----------------------------
 -- Table structure for biz_todo_item
@@ -869,7 +973,7 @@ CREATE TABLE `biz_todo_item` (
   `todo_time` datetime DEFAULT NULL COMMENT '通知时间',
   `handle_time` datetime DEFAULT NULL COMMENT '处理时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='待办事项表';
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='待办事项表';
 
 -- ----------------------------
 -- Records of biz_todo_item
@@ -884,6 +988,15 @@ INSERT INTO `biz_todo_item` VALUES ('28', '阿萨德发斯蒂芬', '阿斯顿发
 INSERT INTO `biz_todo_item` VALUES ('29', '004', 'asdasdasdasdasd', 'leave', '72', '66', 'taskDeptLeaderVerify', '主管审批', '1', '1', 'axianlu', '一直闲鹿', 'axianlu', '一直闲鹿', '2021-05-06 21:01:13', '2021-05-06 21:01:49');
 INSERT INTO `biz_todo_item` VALUES ('30', '004', 'asdasdasdasdasd', 'leave', '80', '66', 'taskHrVerify', '总经理审批', '1', '1', 'rensm', '人事喵', 'rensm', '人事喵', '2021-05-06 21:01:49', '2021-05-06 21:02:07');
 INSERT INTO `biz_todo_item` VALUES ('31', '004', 'asdasdasdasdasd', 'leave', '87', '66', 'taskReportBack', '项目启动确认', '1', '1', 'chengxy', '程序猿', 'chengxy', '程序猿', '2021-05-06 21:02:07', '2021-05-06 21:08:17');
+INSERT INTO `biz_todo_item` VALUES ('32', '0509测试', '暗杀大神大所的', 'leave', '2507', '2501', 'taskDeptLeaderVerify', '主管审批', '0', '0', 'axianlu', '一直闲鹿', null, null, '2021-05-09 17:53:18', null);
+INSERT INTO `biz_todo_item` VALUES ('33', '0509测试002', '撒的发是梵蒂冈', 'leave', '2515', '2509', 'taskDeptLeaderVerify', '主管审批', '0', '0', 'axianlu', '一直闲鹿', null, null, '2021-05-09 17:57:07', null);
+INSERT INTO `biz_todo_item` VALUES ('34', '0509测试003', '0509测试003', 'leave', '2523', '2517', 'taskDeptLeaderVerify', '主管审批', '0', '0', 'axianlu', '一直闲鹿', null, null, '2021-05-09 18:23:15', null);
+INSERT INTO `biz_todo_item` VALUES ('35', '测试006', '测试006', 'leave', '2531', '2525', 'taskDeptLeaderVerify', '主管审批', '0', '0', 'axianlu', '一直闲鹿', null, null, '2021-05-09 18:59:28', null);
+INSERT INTO `biz_todo_item` VALUES ('36', '测试006', '测试006', 'leave', '2531', '2525', 'taskDeptLeaderVerify', '主管审批', '0', '0', 'yezhuguan', '叶主管', null, null, '2021-05-09 18:59:28', null);
+INSERT INTO `biz_todo_item` VALUES ('37', '成败在此一举', '成败在此一举', 'leave', '5007', '5001', 'taskDeptLeaderVerify', '主管审批', '0', '0', 'axianlu', '一直闲鹿', null, null, '2021-05-09 23:54:34', null);
+INSERT INTO `biz_todo_item` VALUES ('38', '成败在此一举', '成败在此一举', 'leave', '5007', '5001', 'taskDeptLeaderVerify', '主管审批', '0', '0', 'yezhuguan', '叶主管', null, null, '2021-05-09 23:54:34', null);
+INSERT INTO `biz_todo_item` VALUES ('39', '成败在此一举2.0', '成败在此一举2.0', 'leave', '5047', '5041', 'taskDeptLeaderVerify', '主管审批', '0', '0', 'yezhuguan', '叶主管', null, null, '2021-05-10 00:01:33', null);
+INSERT INTO `biz_todo_item` VALUES ('40', '成败在此一举3.0', '阿萨德啊实打实的阿萨德', 'leave', '5055', '5049', 'taskDeptLeaderVerify', '主管审批', '0', '0', 'yezhuguan', '叶主管', null, null, '2021-05-10 00:02:12', null);
 
 -- ----------------------------
 -- Table structure for gen_table
@@ -1097,7 +1210,7 @@ CREATE TABLE `qrtz_scheduler_state` (
 -- ----------------------------
 -- Records of qrtz_scheduler_state
 -- ----------------------------
-INSERT INTO `qrtz_scheduler_state` VALUES ('JeeThinkScheduler', 'LAPTOP-DIA024K51620550297238', '1620550836937', '15000');
+INSERT INTO `qrtz_scheduler_state` VALUES ('JeeThinkScheduler', 'LAPTOP-DIA024K51620574695580', '1620576585088', '15000');
 
 -- ----------------------------
 -- Table structure for qrtz_simple_triggers
@@ -1174,9 +1287,9 @@ CREATE TABLE `qrtz_triggers` (
 -- ----------------------------
 -- Records of qrtz_triggers
 -- ----------------------------
-INSERT INTO `qrtz_triggers` VALUES ('JeeThinkScheduler', 'TASK_CLASS_NAME1', 'DEFAULT', 'TASK_CLASS_NAME1', 'DEFAULT', null, '1620550300000', '-1', '5', 'PAUSED', 'CRON', '1620550299000', '0', null, '2', '');
-INSERT INTO `qrtz_triggers` VALUES ('JeeThinkScheduler', 'TASK_CLASS_NAME2', 'DEFAULT', 'TASK_CLASS_NAME2', 'DEFAULT', null, '1620550305000', '-1', '5', 'PAUSED', 'CRON', '1620550300000', '0', null, '2', '');
-INSERT INTO `qrtz_triggers` VALUES ('JeeThinkScheduler', 'TASK_CLASS_NAME3', 'DEFAULT', 'TASK_CLASS_NAME3', 'DEFAULT', null, '1620550300000', '-1', '5', 'PAUSED', 'CRON', '1620550300000', '0', null, '2', '');
+INSERT INTO `qrtz_triggers` VALUES ('JeeThinkScheduler', 'TASK_CLASS_NAME1', 'DEFAULT', 'TASK_CLASS_NAME1', 'DEFAULT', null, '1620574700000', '-1', '5', 'PAUSED', 'CRON', '1620574696000', '0', null, '2', '');
+INSERT INTO `qrtz_triggers` VALUES ('JeeThinkScheduler', 'TASK_CLASS_NAME2', 'DEFAULT', 'TASK_CLASS_NAME2', 'DEFAULT', null, '1620574710000', '-1', '5', 'PAUSED', 'CRON', '1620574696000', '0', null, '2', '');
+INSERT INTO `qrtz_triggers` VALUES ('JeeThinkScheduler', 'TASK_CLASS_NAME3', 'DEFAULT', 'TASK_CLASS_NAME3', 'DEFAULT', null, '1620574700000', '-1', '5', 'PAUSED', 'CRON', '1620574696000', '0', null, '2', '');
 
 -- ----------------------------
 -- Table structure for sys_config
@@ -1388,7 +1501,7 @@ CREATE TABLE `sys_logininfor` (
   `msg` varchar(255) DEFAULT '' COMMENT '提示消息',
   `login_time` datetime DEFAULT NULL COMMENT '访问时间',
   PRIMARY KEY (`info_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=141 DEFAULT CHARSET=utf8mb4 COMMENT='系统访问记录';
+) ENGINE=InnoDB AUTO_INCREMENT=161 DEFAULT CHARSET=utf8mb4 COMMENT='系统访问记录';
 
 -- ----------------------------
 -- Records of sys_logininfor
@@ -1434,6 +1547,26 @@ INSERT INTO `sys_logininfor` VALUES ('137', 'rensm', '127.0.0.1', '内网IP', 'C
 INSERT INTO `sys_logininfor` VALUES ('138', 'rensm', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '退出成功', '2021-05-06 21:02:12');
 INSERT INTO `sys_logininfor` VALUES ('139', 'chengxy', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-06 21:02:21');
 INSERT INTO `sys_logininfor` VALUES ('140', 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-09 16:53:06');
+INSERT INTO `sys_logininfor` VALUES ('141', 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-09 17:39:45');
+INSERT INTO `sys_logininfor` VALUES ('142', 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '退出成功', '2021-05-09 17:41:04');
+INSERT INTO `sys_logininfor` VALUES ('143', 'chengxy', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-09 17:41:16');
+INSERT INTO `sys_logininfor` VALUES ('144', 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '1', '验证码已失效', '2021-05-09 17:55:18');
+INSERT INTO `sys_logininfor` VALUES ('145', 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-09 17:55:22');
+INSERT INTO `sys_logininfor` VALUES ('146', 'chengxy', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-09 18:22:36');
+INSERT INTO `sys_logininfor` VALUES ('147', 'chengxy', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '退出成功', '2021-05-09 18:53:16');
+INSERT INTO `sys_logininfor` VALUES ('148', 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-09 18:53:22');
+INSERT INTO `sys_logininfor` VALUES ('149', 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '退出成功', '2021-05-09 18:58:39');
+INSERT INTO `sys_logininfor` VALUES ('150', 'chengxy', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-09 18:58:52');
+INSERT INTO `sys_logininfor` VALUES ('151', 'chengxy', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '退出成功', '2021-05-09 18:59:31');
+INSERT INTO `sys_logininfor` VALUES ('152', 'yezhuguan', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-09 18:59:43');
+INSERT INTO `sys_logininfor` VALUES ('153', 'yezhuguan', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-09 19:49:31');
+INSERT INTO `sys_logininfor` VALUES ('154', 'yezhuguan', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-09 22:02:03');
+INSERT INTO `sys_logininfor` VALUES ('155', 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-09 22:44:39');
+INSERT INTO `sys_logininfor` VALUES ('156', 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '退出成功', '2021-05-09 23:30:19');
+INSERT INTO `sys_logininfor` VALUES ('157', 'chengxy', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-09 23:30:29');
+INSERT INTO `sys_logininfor` VALUES ('158', 'chengxy', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '退出成功', '2021-05-10 00:02:34');
+INSERT INTO `sys_logininfor` VALUES ('159', 'yezhuguan', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '1', '验证码已失效', '2021-05-10 00:02:43');
+INSERT INTO `sys_logininfor` VALUES ('160', 'yezhuguan', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2021-05-10 00:02:44');
 
 -- ----------------------------
 -- Table structure for sys_menu
@@ -1474,9 +1607,9 @@ INSERT INTO `sys_menu` VALUES ('102', '菜单管理', '1', '3', 'menu', 'system/
 INSERT INTO `sys_menu` VALUES ('103', '部门管理', '1', '4', 'dept', 'system/dept/index', '1', '0', 'C', '0', '0', 'system:dept:list', 'tree', 'admin', '2018-03-16 11:33:00', 'jt', '2018-03-16 11:33:00', '部门管理菜单');
 INSERT INTO `sys_menu` VALUES ('104', '岗位管理', '1', '5', 'post', 'system/post/index', '1', '0', 'C', '0', '0', 'system:post:list', 'post', 'admin', '2018-03-16 11:33:00', 'jt', '2018-03-16 11:33:00', '岗位管理菜单');
 INSERT INTO `sys_menu` VALUES ('105', '字典管理', '1', '6', 'dict', 'system/dict/index', '1', '0', 'C', '0', '0', 'system:dict:list', 'dict', 'admin', '2018-03-16 11:33:00', 'jt', '2018-03-16 11:33:00', '字典管理菜单');
-INSERT INTO `sys_menu` VALUES ('106', '参数设置', '1', '7', 'config', 'system/config/index', '1', '0', 'C', '0', '0', 'system:config:list', 'edit', 'admin', '2018-03-16 11:33:00', 'jt', '2018-03-16 11:33:00', '参数设置菜单');
-INSERT INTO `sys_menu` VALUES ('107', '通知公告', '1', '8', 'notice', 'system/notice/index', '1', '0', 'C', '1', '0', 'system:notice:list', 'message', 'admin', '2018-03-16 11:33:00', 'admin', '2021-05-06 16:48:01', '通知公告菜单');
-INSERT INTO `sys_menu` VALUES ('108', '日志管理', '1', '9', 'log', 'system/log/index', '1', '0', 'M', '0', '0', '', 'log', 'admin', '2018-03-16 11:33:00', 'jt', '2018-03-16 11:33:00', '日志管理菜单');
+INSERT INTO `sys_menu` VALUES ('106', '参数设置', '1', '7', 'config', 'system/config/index', '1', '0', 'C', '1', '0', 'system:config:list', 'edit', 'admin', '2018-03-16 11:33:00', 'admin', '2021-05-09 17:40:27', '参数设置菜单');
+INSERT INTO `sys_menu` VALUES ('107', '通知公告', '1', '8', 'notice', 'system/notice/index', '1', '0', 'C', '1', '0', 'system:notice:list', 'message', 'admin', '2018-03-16 11:33:00', 'admin', '2021-05-09 17:40:22', '通知公告菜单');
+INSERT INTO `sys_menu` VALUES ('108', '日志管理', '1', '9', 'log', 'system/log/index', '1', '0', 'M', '1', '0', '', 'log', 'admin', '2018-03-16 11:33:00', 'admin', '2021-05-09 17:40:16', '日志管理菜单');
 INSERT INTO `sys_menu` VALUES ('109', '在线用户', '2', '1', 'online', 'monitor/online/index', '1', '0', 'C', '0', '0', 'monitor:online:list', 'online', 'admin', '2018-03-16 11:33:00', 'jt', '2018-03-16 11:33:00', '在线用户菜单');
 INSERT INTO `sys_menu` VALUES ('110', '定时任务', '2', '2', 'job', 'monitor/job/index', '1', '0', 'C', '0', '0', 'monitor:job:list', 'job', 'admin', '2018-03-16 11:33:00', 'jt', '2018-03-16 11:33:00', '定时任务菜单');
 INSERT INTO `sys_menu` VALUES ('111', '数据监控', '2', '3', 'druid', 'monitor/druid/index', '1', '0', 'C', '0', '0', 'monitor:druid:list', 'druid', 'admin', '2018-03-16 11:33:00', 'jt', '2018-03-16 11:33:00', '数据监控菜单');
@@ -1601,7 +1734,7 @@ CREATE TABLE `sys_oper_log` (
   `error_msg` varchar(2000) DEFAULT '' COMMENT '错误消息',
   `oper_time` datetime DEFAULT NULL COMMENT '操作时间',
   PRIMARY KEY (`oper_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=126 DEFAULT CHARSET=utf8mb4 COMMENT='操作日志记录';
+) ENGINE=InnoDB AUTO_INCREMENT=159 DEFAULT CHARSET=utf8mb4 COMMENT='操作日志记录';
 
 -- ----------------------------
 -- Records of sys_oper_log
@@ -1632,6 +1765,39 @@ INSERT INTO `sys_oper_log` VALUES ('122', '请假业务', '2', 'com.jeethink.lea
 INSERT INTO `sys_oper_log` VALUES ('123', '请假业务', '2', 'com.jeethink.leave.controller.BizLeaveController.submitApply()', 'POST', '1', 'chengxy', null, '/workflow/leave/submitApply/37', '127.0.0.1', '内网IP', '37', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-06 20:56:34');
 INSERT INTO `sys_oper_log` VALUES ('124', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'chengxy', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"asdasdasdasdasd\",\"title\":\"004\",\"type\":\"leave\",\"id\":38,\"leaveEndTime\":1624550400000,\"leaveStartTime\":1619971200000,\"totalTime\":4579200,\"params\":{},\"createBy\":\"chengxy\",\"createTime\":1620306069409,\"processParams\":{}}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-06 21:01:09');
 INSERT INTO `sys_oper_log` VALUES ('125', '请假业务', '2', 'com.jeethink.leave.controller.BizLeaveController.submitApply()', 'POST', '1', 'chengxy', null, '/workflow/leave/submitApply/38', '127.0.0.1', '内网IP', '38', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-06 21:01:12');
+INSERT INTO `sys_oper_log` VALUES ('126', '菜单管理', '2', 'com.jeethink.web.controller.system.SysMenuController.edit()', 'PUT', '1', 'admin', null, '/system/menu', '127.0.0.1', '内网IP', '{\"visible\":\"1\",\"icon\":\"log\",\"orderNum\":\"9\",\"menuName\":\"日志管理\",\"params\":{},\"parentId\":1,\"isCache\":\"0\",\"path\":\"log\",\"component\":\"system/log/index\",\"children\":[],\"createTime\":1521171180000,\"updateBy\":\"admin\",\"isFrame\":\"1\",\"menuId\":108,\"menuType\":\"M\",\"perms\":\"\",\"status\":\"0\"}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 17:40:17');
+INSERT INTO `sys_oper_log` VALUES ('127', '菜单管理', '2', 'com.jeethink.web.controller.system.SysMenuController.edit()', 'PUT', '1', 'admin', null, '/system/menu', '127.0.0.1', '内网IP', '{\"visible\":\"1\",\"icon\":\"message\",\"orderNum\":\"8\",\"menuName\":\"通知公告\",\"params\":{},\"parentId\":1,\"isCache\":\"0\",\"path\":\"notice\",\"component\":\"system/notice/index\",\"children\":[],\"createTime\":1521171180000,\"updateBy\":\"admin\",\"isFrame\":\"1\",\"menuId\":107,\"menuType\":\"C\",\"perms\":\"system:notice:list\",\"status\":\"0\"}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 17:40:22');
+INSERT INTO `sys_oper_log` VALUES ('128', '菜单管理', '2', 'com.jeethink.web.controller.system.SysMenuController.edit()', 'PUT', '1', 'admin', null, '/system/menu', '127.0.0.1', '内网IP', '{\"visible\":\"1\",\"icon\":\"edit\",\"orderNum\":\"7\",\"menuName\":\"参数设置\",\"params\":{},\"parentId\":1,\"isCache\":\"0\",\"path\":\"config\",\"component\":\"system/config/index\",\"children\":[],\"createTime\":1521171180000,\"updateBy\":\"admin\",\"isFrame\":\"1\",\"menuId\":106,\"menuType\":\"C\",\"perms\":\"system:config:list\",\"status\":\"0\"}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 17:40:27');
+INSERT INTO `sys_oper_log` VALUES ('129', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'chengxy', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"暗杀大神大所的\",\"title\":\"0509测试\",\"type\":\"leave\",\"id\":39,\"leaveEndTime\":1623859200000,\"leaveStartTime\":1621353600000,\"totalTime\":2505600,\"params\":{},\"createBy\":\"chengxy\",\"createTime\":1620553328869,\"processParams\":{}}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 17:42:09');
+INSERT INTO `sys_oper_log` VALUES ('130', '请假业务', '2', 'com.jeethink.leave.controller.BizLeaveController.submitApply()', 'POST', '1', 'chengxy', null, '/workflow/leave/submitApply/39', '127.0.0.1', '内网IP', '39', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 17:54:35');
+INSERT INTO `sys_oper_log` VALUES ('131', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'chengxy', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"撒的发是梵蒂冈\",\"title\":\"0509测试002\",\"type\":\"leave\",\"id\":40,\"leaveEndTime\":1623859200000,\"leaveStartTime\":1620057600000,\"totalTime\":3801600,\"params\":{},\"createBy\":\"chengxy\",\"createTime\":1620554187174,\"processParams\":{}}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 17:56:27');
+INSERT INTO `sys_oper_log` VALUES ('132', '请假业务', '2', 'com.jeethink.leave.controller.BizLeaveController.submitApply()', 'POST', '1', null, null, '/workflow/leave/submitApply/40', '127.0.0.1', '内网IP', '40', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 18:21:49');
+INSERT INTO `sys_oper_log` VALUES ('133', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'chengxy', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"0509测试003\",\"title\":\"0509测试003\",\"type\":\"leave\",\"id\":41,\"leaveEndTime\":1624982400000,\"leaveStartTime\":1620835200000,\"totalTime\":4147200,\"params\":{},\"createBy\":\"chengxy\",\"createTime\":1620555791707,\"processParams\":{}}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 18:23:11');
+INSERT INTO `sys_oper_log` VALUES ('134', '请假业务', '2', 'com.jeethink.leave.controller.BizLeaveController.submitApply()', 'POST', '1', 'chengxy', null, '/workflow/leave/submitApply/41', '127.0.0.1', '内网IP', '41', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 18:26:12');
+INSERT INTO `sys_oper_log` VALUES ('135', '用户管理', '1', 'com.jeethink.web.controller.system.SysUserController.add()', 'POST', '1', 'admin', null, '/system/user', '127.0.0.1', '内网IP', '{\"phonenumber\":\"13771277677\",\"admin\":false,\"remark\":\"123123\",\"password\":\"$2a$10$sl2S9Lk1960cT.I1YBwqGepLa883HYXMQMMszEvnRswdudHXrSbZW\",\"postIds\":[5],\"email\":\"13771277677@163.com\",\"nickName\":\"叶主管\",\"sex\":\"1\",\"deptId\":105,\"params\":{},\"userName\":\"yezhuguan\",\"userId\":103,\"createBy\":\"admin\",\"roleIds\":[100],\"status\":\"0\"}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 18:54:57');
+INSERT INTO `sys_oper_log` VALUES ('136', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'chengxy', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"测试006\",\"title\":\"测试006\",\"type\":\"leave\",\"id\":42,\"leaveEndTime\":1625673600000,\"leaveStartTime\":1620057600000,\"totalTime\":5616000,\"params\":{},\"createBy\":\"chengxy\",\"createTime\":1620557958994,\"processParams\":{}}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 18:59:19');
+INSERT INTO `sys_oper_log` VALUES ('137', '请假业务', '2', 'com.jeethink.leave.controller.BizLeaveController.submitApply()', 'POST', '1', 'chengxy', null, '/workflow/leave/submitApply/42', '127.0.0.1', '内网IP', '42', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 18:59:27');
+INSERT INTO `sys_oper_log` VALUES ('138', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'admin', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"zxc\",\"title\":\"xc\",\"leaveEndTime\":1623772800000,\"leaveStartTime\":1620144000000,\"totalTime\":3628800,\"params\":{},\"processParams\":{}}', '{\"msg\":\"提交申请失败：不允许管理员提交申请！\",\"code\":500}', '0', null, '2021-05-09 23:08:42');
+INSERT INTO `sys_oper_log` VALUES ('139', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'admin', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"cxvc\",\"title\":\"xczx\",\"leaveEndTime\":1624550400000,\"leaveStartTime\":1621440000000,\"totalTime\":3110400,\"params\":{},\"processParams\":{}}', '{\"msg\":\"提交申请失败：不允许管理员提交申请！\",\"code\":500}', '0', null, '2021-05-09 23:14:07');
+INSERT INTO `sys_oper_log` VALUES ('140', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'admin', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"cxv\",\"title\":\"cx\",\"leaveEndTime\":1623686400000,\"leaveStartTime\":1620144000000,\"totalTime\":3542400,\"params\":{},\"processParams\":{}}', '{\"msg\":\"提交申请失败：不允许管理员提交申请！\",\"code\":500}', '0', null, '2021-05-09 23:14:57');
+INSERT INTO `sys_oper_log` VALUES ('141', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'admin', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"cxv\",\"title\":\"cv\",\"leaveEndTime\":1624464000000,\"leaveStartTime\":1621526400000,\"totalTime\":2937600,\"params\":{},\"processParams\":{}}', '{\"msg\":\"提交申请失败：不允许管理员提交申请！\",\"code\":500}', '0', null, '2021-05-09 23:22:24');
+INSERT INTO `sys_oper_log` VALUES ('142', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'admin', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"xc\",\"title\":\"xc\",\"leaveEndTime\":1624464000000,\"leaveStartTime\":1620835200000,\"totalTime\":3628800,\"params\":{},\"processParams\":{}}', '{\"msg\":\"提交申请失败：不允许管理员提交申请！\",\"code\":500}', '0', null, '2021-05-09 23:23:50');
+INSERT INTO `sys_oper_log` VALUES ('143', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'admin', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"qeqweqweqw\",\"title\":\"qweqweqweqwe\",\"leaveEndTime\":1620230400000,\"leaveStartTime\":1620057600000,\"totalTime\":172800,\"params\":{},\"processParams\":{}}', '{\"msg\":\"提交申请失败：不允许管理员提交申请！\",\"code\":500}', '0', null, '2021-05-09 23:30:14');
+INSERT INTO `sys_oper_log` VALUES ('144', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'chengxy', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"asdadasdasd\",\"title\":\"qweqweqweqweqweqw\",\"type\":\"leave\",\"id\":43,\"leaveEndTime\":1620144000000,\"leaveStartTime\":1619971200000,\"totalTime\":172800,\"params\":{},\"createBy\":\"chengxy\",\"createTime\":1620574244579,\"processParams\":{}}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 23:30:44');
+INSERT INTO `sys_oper_log` VALUES ('145', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'chengxy', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"123123123\",\"title\":\"123123\",\"type\":\"leave\",\"id\":44,\"leaveEndTime\":1625155200000,\"leaveStartTime\":1621440000000,\"totalTime\":3715200,\"params\":{},\"createBy\":\"chengxy\",\"createTime\":1620574342279,\"processParams\":{}}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 23:32:22');
+INSERT INTO `sys_oper_log` VALUES ('146', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'chengxy', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"123123123123123\",\"title\":\"12312313123123\",\"type\":\"leave\",\"id\":45,\"leaveEndTime\":1622995200000,\"leaveStartTime\":1620144000000,\"totalTime\":2851200,\"params\":{},\"createBy\":\"chengxy\",\"createTime\":1620574444117,\"processParams\":{}}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 23:34:04');
+INSERT INTO `sys_oper_log` VALUES ('147', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'chengxy', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"123123123123123\",\"leaders\":\"axianlu;yezhuguan;\",\"title\":\"123123123123123\",\"type\":\"leave\",\"id\":46,\"leaveEndTime\":1621612800000,\"czfaIds\":[\"axianlu\",\"yezhuguan\"],\"leaveStartTime\":1621094400000,\"totalTime\":518400,\"params\":{},\"createBy\":\"chengxy\",\"createTime\":1620574578148,\"processParams\":{}}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 23:36:18');
+INSERT INTO `sys_oper_log` VALUES ('148', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'chengxy', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"123123123123\",\"leaders\":\"axianlu;yezhuguan;\",\"title\":\"123123123123\",\"type\":\"leave\",\"id\":47,\"leaveEndTime\":1624377600000,\"czfaIds\":[\"axianlu\",\"yezhuguan\"],\"leaveStartTime\":1621180800000,\"totalTime\":3196800,\"params\":{},\"createBy\":\"chengxy\",\"createTime\":1620574719474,\"processParams\":{}}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 23:38:39');
+INSERT INTO `sys_oper_log` VALUES ('149', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'chengxy', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"成败在此一举\",\"leaders\":\"yezhuguan;\",\"title\":\"成败在此一举\",\"type\":\"leave\",\"id\":48,\"leaveEndTime\":1623600000000,\"czfaIds\":[\"yezhuguan\"],\"leaveStartTime\":1620144000000,\"totalTime\":3456000,\"params\":{},\"createBy\":\"chengxy\",\"createTime\":1620575417094,\"processParams\":{}}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 23:50:17');
+INSERT INTO `sys_oper_log` VALUES ('150', '请假业务', '2', 'com.jeethink.leave.controller.BizLeaveController.submitApply1()', 'POST', '1', 'chengxy', null, '/workflow/leave/submitApply1/48', '127.0.0.1', '内网IP', '48', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 23:54:34');
+INSERT INTO `sys_oper_log` VALUES ('151', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'chengxy', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"成败在此一举2.0\",\"leaders\":\"yezhuguan;\",\"title\":\"成败在此一举2.0\",\"type\":\"leave\",\"id\":49,\"leaveEndTime\":1623859200000,\"czfaIds\":[\"yezhuguan\"],\"leaveStartTime\":1620662400000,\"totalTime\":3196800,\"params\":{},\"createBy\":\"chengxy\",\"createTime\":1620575771368,\"processParams\":{}}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-09 23:56:11');
+INSERT INTO `sys_oper_log` VALUES ('152', '请假业务', '2', 'com.jeethink.leave.controller.BizLeaveController.submitApply1()', 'POST', '1', 'chengxy', null, '/workflow/leave/submitApply1/49', '127.0.0.1', '内网IP', '49', 'null', '1', '', '2021-05-09 23:56:14');
+INSERT INTO `sys_oper_log` VALUES ('153', '请假业务', '2', 'com.jeethink.leave.controller.BizLeaveController.submitApply1()', 'POST', '1', 'chengxy', null, '/workflow/leave/submitApply1/49', '127.0.0.1', '内网IP', '49', 'null', '1', '', '2021-05-09 23:56:18');
+INSERT INTO `sys_oper_log` VALUES ('154', '请假业务', '2', 'com.jeethink.leave.controller.BizLeaveController.submitApply1()', 'POST', '1', 'chengxy', null, '/workflow/leave/submitApply1/49', '127.0.0.1', '内网IP', '49', 'null', '1', '', '2021-05-09 23:59:28');
+INSERT INTO `sys_oper_log` VALUES ('155', '请假业务', '2', 'com.jeethink.leave.controller.BizLeaveController.submitApply1()', 'POST', '1', 'chengxy', null, '/workflow/leave/submitApply1/49', '127.0.0.1', '内网IP', '49', 'null', '1', '', '2021-05-10 00:01:30');
+INSERT INTO `sys_oper_log` VALUES ('156', '请假业务', '2', 'com.jeethink.leave.controller.BizLeaveController.submitApply1()', 'POST', '1', 'chengxy', null, '/workflow/leave/submitApply1/49', '127.0.0.1', '内网IP', '49', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-10 00:01:32');
+INSERT INTO `sys_oper_log` VALUES ('157', '请假流程', '1', 'com.jeethink.leave.controller.BizLeaveController.add()', 'POST', '1', 'chengxy', null, '/workflow/leave', '127.0.0.1', '内网IP', '{\"reason\":\"阿萨德啊实打实的阿萨德\",\"leaders\":\"yezhuguan;\",\"title\":\"成败在此一举3.0\",\"type\":\"leave\",\"id\":50,\"leaveEndTime\":1624464000000,\"czfaIds\":[\"yezhuguan\"],\"leaveStartTime\":1620662400000,\"totalTime\":3801600,\"params\":{},\"createBy\":\"chengxy\",\"createTime\":1620576128651,\"processParams\":{}}', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-10 00:02:08');
+INSERT INTO `sys_oper_log` VALUES ('158', '请假业务', '2', 'com.jeethink.leave.controller.BizLeaveController.submitApply1()', 'POST', '1', 'chengxy', null, '/workflow/leave/submitApply1/50', '127.0.0.1', '内网IP', '50', '{\"msg\":\"操作成功\",\"code\":200}', '0', null, '2021-05-10 00:02:12');
 
 -- ----------------------------
 -- Table structure for sys_post
@@ -1830,7 +1996,7 @@ CREATE TABLE `sys_user` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8mb4 COMMENT='用户信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=utf8mb4 COMMENT='用户信息表';
 
 -- ----------------------------
 -- Records of sys_user
@@ -1840,6 +2006,7 @@ INSERT INTO `sys_user` VALUES ('2', '105', 'jt', '吉想', '00', 'jt@qq.com', '1
 INSERT INTO `sys_user` VALUES ('100', '105', 'chengxy', '程序猿', '00', '5678@126.com', '18612345678', '0', '', '$2a$10$sGpjUm5Dcr/R2hF2vB.rVesrAmivSImOMRvVG7FftQmUa.beLaDd6', '0', '0', '', null, 'admin', '2020-09-15 21:48:35', 'admin', '2020-09-20 00:20:27', null);
 INSERT INTO `sys_user` VALUES ('101', '105', 'axianlu', '一直闲鹿', '00', '5677@126.com', '18612345677', '0', '', '$2a$10$NnKYtA5fnfh.lJYFHYg1f.Gpxjo.ciXhNmJnJ5xxOvJ6GhW/LoE6S', '0', '0', '', null, 'admin', '2020-09-15 21:51:03', 'admin', '2020-09-20 00:20:34', null);
 INSERT INTO `sys_user` VALUES ('102', '105', 'rensm', '人事喵', '00', '5676@126.com', '18612345676', '1', '', '$2a$10$rYsRNoUDmA41RTOV6vsKr.UMNnvPspV92zX.A2ZbV78vokHwKWMiW', '0', '0', '', null, 'admin', '2020-09-15 21:51:59', 'admin', '2020-09-20 00:20:43', null);
+INSERT INTO `sys_user` VALUES ('103', '105', 'yezhuguan', '叶主管', '00', '13771277677@163.com', '13771277677', '1', '', '$2a$10$sl2S9Lk1960cT.I1YBwqGepLa883HYXMQMMszEvnRswdudHXrSbZW', '0', '0', '', null, 'admin', '2021-05-09 18:54:57', '', null, '123123');
 
 -- ----------------------------
 -- Table structure for sys_user_post
@@ -1859,6 +2026,7 @@ INSERT INTO `sys_user_post` VALUES ('2', '2');
 INSERT INTO `sys_user_post` VALUES ('100', '4');
 INSERT INTO `sys_user_post` VALUES ('101', '5');
 INSERT INTO `sys_user_post` VALUES ('102', '3');
+INSERT INTO `sys_user_post` VALUES ('103', '5');
 
 -- ----------------------------
 -- Table structure for sys_user_role
@@ -1878,6 +2046,7 @@ INSERT INTO `sys_user_role` VALUES ('2', '2');
 INSERT INTO `sys_user_role` VALUES ('100', '100');
 INSERT INTO `sys_user_role` VALUES ('101', '100');
 INSERT INTO `sys_user_role` VALUES ('102', '100');
+INSERT INTO `sys_user_role` VALUES ('103', '100');
 
 -- ----------------------------
 -- View structure for act_id_group

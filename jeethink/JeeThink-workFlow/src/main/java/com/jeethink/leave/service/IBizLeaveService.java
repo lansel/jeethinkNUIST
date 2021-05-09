@@ -3,6 +3,8 @@ package com.jeethink.leave.service;
 import java.util.List;
 import java.util.Map;
 
+import com.jeethink.common.core.domain.entity.SysUser;
+import com.jeethink.system.service.ISysUserService;
 import org.activiti.engine.runtime.ProcessInstance;
 
 import com.jeethink.leave.domain.BizLeave;
@@ -71,11 +73,27 @@ public interface IBizLeaveService
     ProcessInstance submitApply(BizLeave entity, String applyUserId, String key, Map<String, Object> variables);
 
     /**
+     * 启动流程
+     * @param entity
+     * @param applyUserId
+     * @return
+     */
+    ProcessInstance submitApply1(BizLeave entity, String applyUserId, String key, Map<String, Object> variables);
+
+    /**
      * 查询我的待办列表
      * @param userId
      * @return
      */
     List<BizLeave> findTodoTasks(BizLeave leave, String userId);
+
+    /**
+     * 查询我的待办列表
+     * @param userId
+     * @return
+     */
+    List<BizLeave> findTodoTasks1(BizLeave leave, String userId);
+
     /**
      * 查询我的已办列表
      * @param userId
@@ -86,4 +104,6 @@ public interface IBizLeaveService
     Integer countProcessing(String time);
 
     List<String> getAllList();
+
+    List<SysUser> getUserList();
 }

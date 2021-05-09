@@ -79,6 +79,9 @@ public interface BizTodoItemMapper {
      * @param instanceId
      * @return
      */
-    @Select("SELECT NODE_NAME as nodeName,IS_HANDLE as isHandle FROM BIZ_TODO_ITEM WHERE INSTANCE_ID = #{instanceId}")
+    @Select("SELECT NODE_NAME as nodeName,IS_HANDLE as isHandle,todo_user_id as todoUserId FROM BIZ_TODO_ITEM WHERE INSTANCE_ID = #{instanceId}")
     List<BizTodoItem> selectTodoItemByInstanceId(@Param(value = "instanceId") String instanceId);
+
+    @Select("select leaders from biz_leave where id = #{instanceId}")
+    String getLeaders(@Param(value = "instanceId") String instanceId);
 }

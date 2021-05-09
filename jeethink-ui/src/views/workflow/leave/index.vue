@@ -179,6 +179,40 @@
         <el-form-item label="项目时长" prop="totalTime">
           <el-input v-model="formatDateSub" :disabled="true"/>
         </el-form-item>
+        <el-form-item prop="czfaIds" label="审批主管">
+          <!-- <el-select v-model="form.czfaIds" multiple style="width:80%;" placeholder="请选择" clearable :disabled="showControl">
+             <el-option
+                     v-for="item in czfas" 
+                     :key="item.value"
+                     :label="item.wsdFamc" 
+                     :value="item.id" 
+               />
+           </el-select> -->
+
+           <!-- <el-select
+    v-model="czfaIds"
+    multiple
+    collapse-tags
+    placeholder="请选择">
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select> -->
+  <el-select v-model="form.czfaIds" style="width:100%;" multiple placeholder="请选择">
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+       </el-form-item>
+
+
+
 
 
         <el-form-item label="实际开始时间" prop="realityStartTime" v-if="showVerify.ReportBack">
@@ -262,7 +296,8 @@
     exportLeave,
     submitApply,
     taskDoneList,
-    taskList
+    taskList,
+    getDeptLeader
   } from '@/api/workflow/leave'
   import {cancelApply, suspendOrActiveApply, showVerifyDialog, complete} from '@/api/activiti/process'
   import {calcTotalSecond, formatTotalDateSub} from '@/utils/dateUtil'
@@ -281,8 +316,10 @@
           ModifyApply: false,
           DeptLeaderVerify: false,
           HrVerify: false,
-          ReportBack: false,
+          ReportBack: false
         },
+        options: [],
+        czfaIds: [],
         // 路径
         path: '',
         // 查询方法
@@ -346,6 +383,9 @@
           ], reason: [
             {required: true, message: '原因不能为空', trigger: 'blur'}
           ]
+          // , czfaIds: [
+          //   {required: true, message: '审核主管不能为空', trigger: 'blur'}
+          // ]
           // , realityStartTime: [
           //   {required: true, message: '原因不能为空', trigger: 'blur'}
           // ], realityEndTime: [
@@ -364,9 +404,17 @@
       } else if ('done' == path) {
         this.getLeaveList = taskDoneList
       }
-      this.getList()
+      this.getList();
+      this.getDeptLeaderList();
     },
     methods: {
+
+
+      getDeptLeaderList(){
+        getDeptLeader().then(res => {
+          this.options = res;
+        });
+      },
 
       submitShowVerifyDialog() {
         this.$refs['form'].validate(valid => {
@@ -464,7 +512,8 @@
           applyTime: null,
           realityStartTime: null,
           realityEndTime: null,
-          processParams: {}
+          processParams: {},
+          czfaIds: []
         }
         this.startAndEndTime = ['', '']
         this.formatDateSub = null
@@ -570,6 +619,8 @@
                 }
               })
             } else {
+              var that = this;
+              console.log(this.form);
               addLeave(this.form).then(response => {
                 if (response.code === 200) {
                   this.msgSuccess('新增成功')

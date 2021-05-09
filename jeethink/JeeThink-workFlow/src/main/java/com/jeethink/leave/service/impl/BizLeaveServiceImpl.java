@@ -192,6 +192,33 @@ public class BizLeaveServiceImpl implements IBizLeaveService {
     }
 
     /**
+     * 启动流程
+     *
+     * @param entity
+     * @param applyUserId
+     * @param key
+     * @param variables
+     * @return
+     */
+    @Override
+    public ProcessInstance submitApply1(BizLeave entity, String applyUserId, String key,
+            Map<String, Object> variables) {
+        entity.setApplyUser(applyUserId);
+        entity.setApplyTime(DateUtils.getNowDate());
+        entity.setUpdateBy(applyUserId);
+        bizLeaveMapper.updateBizLeave(entity);
+        String businessKey = entity.getId().toString(); // 实体类 ID，作为流程的业务 key
+
+        ProcessInstance processInstance = processService.submitApply1(applyUserId, businessKey, entity.getTitle(), entity.getReason(), key, variables);
+
+        String processInstanceId = processInstance.getId();
+        entity.setInstanceId(processInstanceId); // 建立双向关系
+        bizLeaveMapper.updateBizLeave(entity);
+
+        return processInstance;
+    }
+
+    /**
      * 查询待办任务
      */
     public Page<BizLeave> findTodoTasks(BizLeave leave, String userId) {
@@ -244,6 +271,66 @@ public class BizLeaveServiceImpl implements IBizLeaveService {
 
         return list;
     }
+
+    /**
+     * 查询我的待办列表
+     *
+     * @param leave
+     * @param userId
+     * @return
+     */
+    @Override
+    public List<BizLeave> findTodoTasks1(BizLeave leave, String userId) {
+        // 手动分页
+        PageDomain pageDomain = TableSupport.buildPageRequest();
+        Integer pageNum = pageDomain.getPageNum();
+        Integer pageSize = pageDomain.getPageSize();
+        Page<BizLeave> list = new Page<>();
+
+        List<BizLeave> results = new ArrayList<>();
+        List<Task> tasks = processService.findTodoTasks1(userId, leave.getType());
+        // 根据流程的业务ID查询实体并关联
+        for (Task task : tasks) {
+            TaskEntityImpl taskImpl = (TaskEntityImpl) task;
+            String processInstanceId = taskImpl.getProcessInstanceId();
+            // 条件过滤 1
+            if (StringUtils.isNotBlank(leave.getInstanceId()) && !leave.getInstanceId().equals(processInstanceId)) {
+                continue;
+            }
+            ProcessInstance processInstance = runtimeService.createProcessInstanceQuery().processInstanceId(processInstanceId).singleResult();
+            String businessKey = processInstance.getBusinessKey();
+            BizLeave leave2 = bizLeaveMapper.selectBizLeaveById(new Long(businessKey));
+            // 条件过滤 2
+            if (StringUtils.isNotBlank(leave.getType()) && !leave.getType().equals(leave2.getType())) {
+                continue;
+            }
+            leave2.setTaskId(taskImpl.getId());
+            if (taskImpl.getSuspensionState() == 2) {
+                leave2.setTaskName("已挂起");
+            } else {
+                leave2.setTaskName(taskImpl.getName());
+            }
+            SysUser sysUser = userMapper.selectUserByUserName(leave2.getApplyUser());
+            leave2.setApplyUserName(sysUser.getUserName());
+            results.add(leave2);
+        }
+
+        List<BizLeave> tempList;
+        if (pageNum != null && pageSize != null) {
+            int maxRow = (pageNum - 1) * pageSize + pageSize > results.size() ? results.size() : (pageNum - 1) * pageSize + pageSize;
+            tempList = results.subList((pageNum - 1) * pageSize, maxRow);
+            list.setTotal(results.size());
+            list.setPageNum(pageNum);
+            list.setPageSize(pageSize);
+        } else {
+            tempList = results;
+        }
+
+        list.addAll(tempList);
+
+        return list;
+    }
+
     /**
      * 查询已办列表
      * @param bizLeave
@@ -308,5 +395,10 @@ public class BizLeaveServiceImpl implements IBizLeaveService {
     @Override
     public List<String> getAllList() {
         return bizLeaveMapper.getAllList();
+    }
+
+    @Override
+    public List<SysUser> getUserList() {
+        return bizLeaveMapper.getUserList();
     }
 }

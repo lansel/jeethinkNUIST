@@ -64,6 +64,28 @@ public class ProcessServiceImpl implements IProcessService {
         return instance;
     }
 
+    /**
+     * 提交申请
+     *
+     * @param applyUserId 申请人
+     * @param businessKey 业务表 id
+     * @param itemName
+     * @param itemConent
+     * @param key         流程定义 key
+     * @param variables   流程变量
+     * @return
+     */
+    @Override
+    public ProcessInstance submitApply1(String applyUserId, String businessKey, String itemName, String itemConent, String module, Map<String, Object> variables) {
+        // 用来设置启动流程的人员ID，引擎会自动把用户ID保存到activiti:initiator中
+        identityService.setAuthenticatedUserId(applyUserId);
+        // 启动流程时设置业务 key
+        ProcessInstance instance = runtimeService.startProcessInstanceByKey(module, businessKey, variables);
+        // 下一节点处理人待办事项
+        bizTodoItemService.insertTodoItem1(instance.getProcessInstanceId(), itemName, itemConent, module, businessKey);
+        return instance;
+    }
+
     @Override
     public List<Task> findTodoTasks(String userId, String key) {
         List<Task> tasks = new ArrayList<Task>();
@@ -83,6 +105,43 @@ public class ProcessServiceImpl implements IProcessService {
         tasks.addAll(todoList);
         tasks.addAll(unsignedTasks);
         return tasks;
+    }
+
+    @Override
+    public List<Task> findTodoTasks1(String userId, String key) {
+        List<Task> tasks = new ArrayList<Task>();
+        List<Task> rtnTasks = new ArrayList<Task>();
+        // 根据当前人的ID查询
+        List<Task> todoList = taskService
+                .createTaskQuery()
+                .processDefinitionKey(key)
+                .taskAssignee(userId)
+                .list();
+        // 根据当前人未签收的任务
+        List<Task> unsignedTasks = taskService
+                .createTaskQuery()
+                .processDefinitionKey(key)
+                .taskCandidateUser(userId)
+                .list();
+        // 合并
+        tasks.addAll(todoList);
+        tasks.addAll(unsignedTasks);
+        if (tasks != null && !tasks.isEmpty()) {
+            for (Task task : tasks) {
+                String processInstanceId = task.getProcessInstanceId();
+                List<BizTodoItem> bizTodoItems = bizTodoItemService.selectTodoItemByInstanceId(processInstanceId);
+                if (bizTodoItems != null && !bizTodoItems.isEmpty()) {
+                    for (BizTodoItem item : bizTodoItems) {
+                        if (userId.equals(item.getTodoUserId())) {
+                            rtnTasks.add(task);
+                        }
+                    }
+                }
+            }
+        }
+
+
+        return rtnTasks;
     }
 
     @Override

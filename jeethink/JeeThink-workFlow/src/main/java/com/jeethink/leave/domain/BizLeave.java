@@ -1,12 +1,15 @@
 package com.jeethink.leave.domain;
 
 import java.util.Date;
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jeethink.activiti.domain.ActivitiBaseEntity;
 import com.jeethink.common.annotation.Excel;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+import org.springframework.data.annotation.Transient;
 
 /**
  * 请假流程对象 biz_leave
@@ -60,6 +63,13 @@ public class BizLeave extends ActivitiBaseEntity
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Excel(name = "实际结束时间", width = 30, dateFormat = "yyyy-MM-dd")
     private Date realityEndTime;
+
+    @Transient
+    private List<String> czfaIds;
+
+    /** 主管 */
+    @Excel(name = "主管")
+    private String leaders;
 
     public void setId(Long id) 
     {
@@ -145,6 +155,14 @@ public class BizLeave extends ActivitiBaseEntity
         return realityEndTime;
     }
 
+    public List<String> getCzfaIds() {
+        return czfaIds;
+    }
+
+    public void setCzfaIds(List<String> czfaIds) {
+        this.czfaIds = czfaIds;
+    }
+
     @Override
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)
@@ -165,5 +183,13 @@ public class BizLeave extends ActivitiBaseEntity
             .append("realityStartTime", getRealityStartTime())
             .append("realityEndTime", getRealityEndTime())
             .toString();
+    }
+
+    public String getLeaders() {
+        return leaders;
+    }
+
+    public void setLeaders(String leaders) {
+        this.leaders = leaders;
     }
 }

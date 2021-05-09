@@ -21,6 +21,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result property="applyTime"    column="apply_time"    />
         <result property="realityStartTime"    column="reality_start_time"    />
         <result property="realityEndTime"    column="reality_end_time"    />
+        <result property="leaders"    column="leaders"    />
     </resultMap>
 
     <sql id="selectBizLeaveVo">
@@ -68,6 +69,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="applyTime != null">apply_time,</if>
             <if test="realityStartTime != null">reality_start_time,</if>
             <if test="realityEndTime != null">reality_end_time,</if>
+            <if test="leaders != null">leaders,</if>
          </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="type != null">#{type},</if>
@@ -85,6 +87,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="applyTime != null">#{applyTime},</if>
             <if test="realityStartTime != null">#{realityStartTime},</if>
             <if test="realityEndTime != null">#{realityEndTime},</if>
+            <if test="leaders != null">#{leaders},</if>
          </trim>
     </insert>
 
@@ -106,6 +109,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="applyTime != null">apply_time = #{applyTime},</if>
             <if test="realityStartTime != null">reality_start_time = #{realityStartTime},</if>
             <if test="realityEndTime != null">reality_end_time = #{realityEndTime},</if>
+            <if test="leaders != null">leaders = #{leaders},</if>
         </trim>
         where id = #{id}
     </update>

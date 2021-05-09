@@ -31,7 +31,20 @@ public interface IProcessService {
      */
     ProcessInstance submitApply(String applyUserId, String businessKey, String itemName, String itemConent, String key, Map<String, Object> variables);
 
+
+    /**
+     * 提交申请
+     * @param applyUserId 申请人
+     * @param businessKey 业务表 id
+     * @param key 流程定义 key
+     * @param variables 流程变量
+     * @return
+     */
+    ProcessInstance submitApply1(String applyUserId, String businessKey, String itemName, String itemConent, String key, Map<String, Object> variables);
+
     List<Task> findTodoTasks(String userId, String key);
+
+    List<Task> findTodoTasks1(String userId, String key);
 
     List<HistoricTaskInstance> findDoneTasks(String userId, String key);
 

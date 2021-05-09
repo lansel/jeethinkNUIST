@@ -12,7 +12,7 @@ export function listLeave(query) {
 // 查询请假流程待办列表
 export function taskList(query) {
   return request({
-    url: '/workflow/leave/taskList',
+    url: '/workflow/leave/taskList1',
     method: 'get',
     params: query
   })
@@ -36,7 +36,7 @@ export function getLeave(id) {
 // 提交请假流程
 export function submitApply(id) {
   return request({
-    url: '/workflow/leave/submitApply/' + id,
+    url: '/workflow/leave/submitApply1/' + id,
     method: 'post'
   })
 }
@@ -73,5 +73,13 @@ export function exportLeave(query) {
     url: '/workflow/leave/export',
     method: 'get',
     params: query
+  })
+}
+
+// 查询主管人员
+export function getDeptLeader(query) {
+  return request({
+    url: '/workflow/leave/userlist',
+    method: 'get'
   })
 }

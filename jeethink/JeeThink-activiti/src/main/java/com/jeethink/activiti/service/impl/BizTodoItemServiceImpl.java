@@ -157,6 +157,74 @@ public class BizTodoItemServiceImpl implements IBizTodoItemService {
     }
 
     @Override
+    public int insertTodoItem1(String instanceId, String itemName, String itemContent, String module,
+            String bussinessKey) {
+        BizTodoItem todoItem = new BizTodoItem();
+        todoItem.setItemName(itemName);
+        todoItem.setItemContent(itemContent);
+        todoItem.setIsView("0");
+        todoItem.setIsHandle("0");
+        todoItem.setModule(module);
+        todoItem.setTodoTime(DateUtils.getNowDate());
+        String leaders = bizTodoItemMapper.getLeaders(bussinessKey);
+        List<Task> taskList = taskService.createTaskQuery().processInstanceId(instanceId).active().list();
+        int counter = 0;
+        for (Task task : taskList) {
+
+            // todoitem 去重
+            BizTodoItem bizTodoItem = bizTodoItemMapper.selectTodoItemByTaskId(task.getId());
+            if (bizTodoItem != null)
+                continue;
+
+            BizTodoItem newItem = new BizTodoItem();
+            BeanUtils.copyProperties(todoItem, newItem);
+            newItem.setInstanceId(instanceId);
+            newItem.setTaskId(task.getId());
+            newItem.setTaskName(
+                    "task" + task.getTaskDefinitionKey().substring(0, 1).toUpperCase() + task.getTaskDefinitionKey()
+                            .substring(1));
+            newItem.setNodeName(task.getName());
+            String assignee = task.getAssignee();
+            if (StringUtils.isNotBlank(assignee)) {
+                newItem.setTodoUserId(assignee);
+                SysUser user = userMapper.selectUserByUserName(assignee);
+                newItem.setTodoUserName(user.getNickName());
+                bizTodoItemMapper.insertBizTodoItem(newItem);
+                counter++;
+            }
+            else {
+                // 查询候选用户组
+                List<String> todoUserIdList = bizTodoItemMapper.selectTodoUserListByTaskId(task.getId());
+                if (!CollectionUtils.isEmpty(todoUserIdList)) {
+                    for (String todoUserId : todoUserIdList) {
+                        SysUser todoUser = userMapper.selectUserByUserName(todoUserId);
+                        if (!leaders.contains(todoUser.getUserName())) {
+                            continue;
+                        }
+                        newItem.setTodoUserId(todoUser.getUserName());
+                        newItem.setTodoUserName(todoUser.getNickName());
+                        bizTodoItemMapper.insertBizTodoItem(newItem);
+                        counter++;
+                    }
+                }
+                else {
+                    // 查询候选用户
+                    String todoUserId = bizTodoItemMapper.selectTodoUserByTaskId(task.getId());
+                    SysUser todoUser = userMapper.selectUserByUserName(todoUserId);
+                    newItem.setTodoUserId(todoUser.getUserName());
+                    newItem.setTodoUserName(todoUser.getNickName());
+                    if (!leaders.contains(todoUser.getUserName())) {
+                        continue;
+                    }
+                    bizTodoItemMapper.insertBizTodoItem(newItem);
+                    counter++;
+                }
+            }
+        }
+        return counter;
+    }
+
+    @Override
     public BizTodoItem selectBizTodoItemByCondition(String taskId, String todoUserId) {
         return bizTodoItemMapper.selectTodoItemByCondition(taskId, todoUserId);
     }

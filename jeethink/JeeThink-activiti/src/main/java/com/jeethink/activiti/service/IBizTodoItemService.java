@@ -62,6 +62,8 @@ public interface IBizTodoItemService {
 
     int insertTodoItem(String instanceId, String itemName, String itemContent, String module);
 
+    int insertTodoItem1(String instanceId, String itemName, String itemContent, String module, String bussinessKey);
+
     BizTodoItem selectBizTodoItemByCondition(String taskId, String todoUserId);
 
     List<BizTodoItem> selectTodoItemByInstanceId(String instanceId);

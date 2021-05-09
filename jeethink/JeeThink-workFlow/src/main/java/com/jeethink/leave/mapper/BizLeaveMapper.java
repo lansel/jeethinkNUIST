@@ -3,6 +3,7 @@ package com.jeethink.leave.mapper;
 import java.util.List;
 
 import com.jeethink.activiti.domain.BizTodoItem;
+import com.jeethink.common.core.domain.entity.SysUser;
 import com.jeethink.leave.domain.BizLeave;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -68,5 +69,9 @@ public interface BizLeaveMapper
 
     @Select("SELECT INSTANCE_ID FROM BIZ_LEAVE")
     List<String> getAllList();
+
+    @Select("SELECT user_name as userName,nick_name as nickName from sys_user where user_id in (select user_id from sys_user_post where post_id in (select post_id from sys_post where post_code = 'deptLeader'))")
+    List<SysUser> getUserList();
+
 
 }
