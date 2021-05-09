@@ -21,9 +21,3 @@
 
 
 
-
-
-官方网址：www.jeethink.vip
-官方授权购买地址：https://shop379896684.taobao.com
-版权所有，倒卖必究
-
