@@ -1,11 +1,11 @@
 <template>
   <div class="app-container">
     <el-form :model="queryParams" ref="queryForm" :inline="true" v-show="showSearch" label-width="68px">
-      <el-form-item label="项目类型" prop="type">
+      <!-- <el-form-item label="项目类型" prop="type">
         <el-select v-model="queryParams.type" placeholder="请选择项目类型" clearable size="small">
           <el-option label="请选择字典生成" value=""/>
         </el-select>
-      </el-form-item>
+      </el-form-item> -->
       <el-form-item label="标题" prop="title">
         <el-input
           v-model="queryParams.title"
@@ -46,7 +46,7 @@
     </el-row>
 
     <el-table v-loading="loading" :data="leaveList">
-      <el-table-column label="项目类型" align="center" prop="type"/>
+      <!-- <el-table-column label="项目类型" align="center" prop="type"/> -->
       <el-table-column label="项目名" align="center" prop="title"/>
       <el-table-column label="项目描述" align="center" prop="reason"/>
       <el-table-column label="项目开始时间" align="center" prop="leaveStartTime">
@@ -179,7 +179,7 @@
         <el-form-item label="项目时长" prop="totalTime">
           <el-input v-model="formatDateSub" :disabled="true"/>
         </el-form-item>
-        <el-form-item prop="czfaIds" label="审批主管">
+        <el-form-item prop="czfaIds" label="审批主管" v-show="showczfaIds">
           <!-- <el-select v-model="form.czfaIds" multiple style="width:80%;" placeholder="请选择" clearable :disabled="showControl">
              <el-option
                      v-for="item in czfas" 
@@ -201,7 +201,7 @@
       :value="item.value">
     </el-option>
   </el-select> -->
-  <el-select v-model="form.czfaIds" style="width:100%;" multiple placeholder="请选择">
+  <el-select v-model="form.czfaIds" :disabled=readonly style="width:100%;" multiple placeholder="请选择">
     <el-option
       v-for="item in options"
       :key="item.value"
@@ -320,6 +320,7 @@
         },
         options: [],
         czfaIds: [],
+        showczfaIds: true,
         // 路径
         path: '',
         // 查询方法
@@ -457,11 +458,14 @@
               if ('HrVerify' === response.msg) {
                 this.showVerify.HrVerify = true;
                 this.form.processParams.B_hrApproved = "true";
+                this.showczfaIds = false;
               } else if ('DeptLeaderVerify' === response.msg) {
                 this.showVerify.DeptLeaderVerify = true;
                 this.form.processParams.B_deptLeaderApproved = "true";
+                this.showczfaIds = false;
               } else if ('ReportBack' === response.msg) {
                 this.showVerify.ReportBack = true;
+                this.showczfaIds = false;
               }
               this.readonly = true
             }

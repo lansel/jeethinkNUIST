@@ -1,0 +1,13 @@
+com\jeethink\generator\domain\GenTableColumn.class
+com\jeethink\generator\service\GenTableServiceImpl.class
+com\jeethink\generator\domain\GenTable.class
+com\jeethink\generator\util\VelocityInitializer.class
+com\jeethink\generator\service\IGenTableService.class
+com\jeethink\generator\service\GenTableColumnServiceImpl.class
+com\jeethink\generator\mapper\GenTableColumnMapper.class
+com\jeethink\generator\controller\GenController.class
+com\jeethink\generator\util\GenUtils.class
+com\jeethink\generator\util\VelocityUtils.class
+com\jeethink\generator\mapper\GenTableMapper.class
+com\jeethink\generator\config\GenConfig.class
+com\jeethink\generator\service\IGenTableColumnService.class
